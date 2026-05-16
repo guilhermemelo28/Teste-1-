@@ -39,3 +39,5 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
  
+// ===== ANO AUTOMÁTICO =====
+document.getElementById("ano").textContent = new Date().getFullYear();
