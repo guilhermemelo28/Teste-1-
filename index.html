@@ -1,0 +1,390 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="WOM Escritório de Advocacia - Dr. Wesley Oliveira Melo" />
+    <title>WOM-Escritório de Advocacia</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="1.png" sizes="512x512" type="image/png" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            300: "#fde68a",
+                            400: "#fbbf24",
+                            500: "#d97706",
+                            600: "#b45309",
+                            700: "#92400e",
+                        },
+                        gold: {
+                            100: "#fef3c7",
+                            200: "#fde68a",
+                            300: "#fcd34d",
+                            400: "#fbbf24",
+                            500: "#f59e0b",
+                            600: "#d97706",
+                            700: "#b45309",
+                        },
+                    },
+                    fontFamily: {
+                        sans: ["Urbanist", "system-ui", "sans-serif"],
+                    },
+                },
+            },
+        };
+    </script>
+
+    <style>
+        /* Dourado metálico nos títulos principais */
+        .gold-text {
+            background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 40%, #fde68a 60%, #d97706 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        /* Borda dourada sutil */
+        .gold-border { border-color: #d97706; }
+        /* Separador dourado */
+        .gold-divider {
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #f59e0b, transparent);
+        }
+    </style>
+</head>
+
+<body class="min-h-screen bg-black font-sans text-slate-100 antialiased">
+
+    <!-- ================= HEADER ================= -->
+    <header class="sticky top-0 z-50 border-b border-yellow-900/40 bg-black/90 backdrop-blur-xl">
+        <div class="mx-auto flex max-w-6xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
+
+            <!-- Logo -->
+            <a href="#" class="flex items-center">
+                <img src="logo.png" alt="Logo" class="h-24 w-auto transition hover:scale-105" />
+            </a>
+
+            <!-- Desktop Navigation -->
+            <nav class="hidden items-center gap-8 md:flex" aria-label="Principal">
+                <a href="#features" class="text-sm font-medium text-yellow-200/70 transition hover:text-yellow-400">
+                    Serviços
+                </a>
+                <a href="#localizacao" class="text-sm font-medium text-yellow-200/70 transition hover:text-yellow-400">
+                    Localização
+                </a>
+                <a href="#footer" class="text-sm font-medium text-yellow-200/70 transition hover:text-yellow-400">
+                    Contato
+                </a>
+            </nav>
+
+            <!-- Mobile Menu -->
+            <details class="relative md:hidden">
+                <summary class="flex cursor-pointer list-none items-center justify-center rounded-xl border border-yellow-800/50 bg-black p-2 text-yellow-500 transition hover:border-yellow-500/70 hover:bg-yellow-950/30 [&::-webkit-details-marker]:hidden">
+                    <i class="fa-solid fa-bars text-lg"></i>
+                </summary>
+                <nav class="absolute right-0 top-14 z-50 flex min-w-[220px] flex-col overflow-hidden rounded-2xl border border-yellow-900/40 bg-black shadow-2xl shadow-black/50" aria-label="Principal Mobile">
+                    <a href="#features" class="px-5 py-3 text-sm font-medium text-yellow-200/70 transition hover:bg-yellow-950/30 hover:text-yellow-400">Serviços</a>
+                    <a href="#localizacao" class="px-5 py-3 text-sm font-medium text-yellow-200/70 transition hover:bg-yellow-950/30 hover:text-yellow-400">Localização</a>
+                    <a href="#footer" class="px-5 py-3 text-sm font-medium text-yellow-200/70 transition hover:bg-yellow-950/30 hover:text-yellow-400">Contato</a>
+                </nav>
+            </details>
+        </div>
+    </header>
+
+    <!-- ================= HERO ================= -->
+    <section class="relative overflow-hidden border-b border-yellow-900/30 bg-black py-20 sm:py-24">
+
+        <!-- Efeito de brilho dourado de fundo -->
+        <div class="pointer-events-none absolute inset-0 overflow-hidden">
+            <div class="absolute -left-32 top-0 h-96 w-96 rounded-full bg-yellow-600/5 blur-3xl"></div>
+            <div class="absolute -right-32 bottom-0 h-96 w-96 rounded-full bg-yellow-500/5 blur-3xl"></div>
+        </div>
+
+        <div class="relative mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+            <div class="grid min-h-[70vh] items-center gap-16 lg:grid-cols-2">
+
+                <!-- Texto -->
+                <div>
+                    <p class="text-sm font-semibold uppercase tracking-[0.3em] text-yellow-500">
+                        Sobre Nós:
+                    </p>
+
+                    <h1 class="mt-6 text-5xl font-extrabold leading-tight tracking-tight text-white lg:text-6xl">
+                        Mais de <span class="gold-text">8 anos</span> de experiência na área jurídica
+                    </h1>
+
+                    <div class="gold-divider my-6 max-w-xs"></div>
+
+                    <p class="mt-2 max-w-xl text-lg leading-relaxed text-yellow-100/60">
+                        O Escritório WOM nasceu da visão do Dr. Wesley Oliveira Melo de oferecer serviços jurídicos de excelência com atendimento personalizado e resultados concretos. Fundado com base nos princípios de ética, transparência e dedicação, nosso escritório tem se consolidado como referência em diversas áreas do Direito.
+                    </p>
+
+                    <!-- Botões -->
+                    <div class="mt-10 flex flex-wrap gap-4">
+                        <a href="#localizacao" class="rounded-full border border-yellow-600 bg-yellow-500 px-8 py-4 font-semibold text-black shadow-lg shadow-yellow-500/20 transition duration-200 hover:bg-yellow-400 hover:shadow-yellow-400/40">
+                            Entrar em contato
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Imagem -->
+                <div class="relative overflow-hidden rounded-3xl border border-yellow-800/30 shadow-2xl shadow-black/60">
+                    <img src="fotopai.jpg" alt="Dr Wesley Melo" class="h-full w-full object-cover" />
+                    <!-- Overlay dourado sutil nas bordas -->
+                    <div class="pointer-events-none absolute inset-0 rounded-3xl" style="box-shadow: inset 0 0 60px rgba(217,119,6,0.15);"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= FEATURES ================= -->
+    <section id="features" class="border-b border-yellow-900/30 bg-black py-20 sm:py-24">
+        <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+
+            <div class="mx-auto max-w-2xl text-center">
+                <h2 class="text-3xl font-bold tracking-tight text-white sm:text-4xl">
+                    Nossos <span class="gold-text">serviços</span> ofertados
+                </h2>
+                <div class="gold-divider mx-auto mt-4 max-w-xs"></div>
+                <p class="mt-4 text-lg text-yellow-100/50">
+                    Áreas de atuação do escritório WOM Advogados & Associados
+                </p>
+            </div>
+
+            <div class="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+
+                <!-- Card - Direito Empresarial -->
+                <article class="group rounded-2xl border border-yellow-900/40 bg-zinc-950 p-6 transition hover:-translate-y-1 hover:border-yellow-600/50 hover:shadow-xl hover:shadow-yellow-500/5">
+                    <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-yellow-500/10 text-yellow-500">
+                        <i class="fa-solid fa-briefcase text-xl"></i>
+                    </div>
+                    <h3 class="mt-4 text-lg font-semibold text-white">Direito Empresarial</h3>
+                    <p class="mt-2 text-yellow-100/50">
+                        Assessoria jurídica especializada para empresas em São Paulo que transforma desafios legais em oportunidades de crescimento sustentável. O Dr. Wesley Oliveira Melo oferece soluções personalizadas em contratos comerciais, fusões e aquisições, compliance empresarial e planejamento societário, com abordagem estratégica que protege patrimônios e potencializa resultados.
+                    </p>
+                </article>
+
+                <!-- Card - Direito Civil -->
+                <article class="group rounded-2xl border border-yellow-900/40 bg-zinc-950 p-6 transition hover:-translate-y-1 hover:border-yellow-600/50 hover:shadow-xl hover:shadow-yellow-500/5">
+                    <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-yellow-500/10 text-yellow-500">
+                        <i class="fa-solid fa-scale-balanced text-xl"></i>
+                    </div>
+                    <h3 class="mt-4 text-lg font-semibold text-white">Direito Civil</h3>
+                    <p class="mt-2 text-yellow-100/50">
+                        Soluções jurídicas personalizadas em Direito Civil com a expertise do Dr. Wesley Oliveira Melo em questões patrimoniais, contratuais e familiares. Nosso escritório oferece representação de excelência em ações indenizatórias, disputas contratuais, direito imobiliário e sucessões, com abordagem que privilegia resultados concretos e comunicação transparente.
+                    </p>
+                </article>
+
+                <!-- Card - Direito Trabalhista -->
+                <article class="group rounded-2xl border border-yellow-900/40 bg-zinc-950 p-6 transition hover:-translate-y-1 hover:border-yellow-600/50 hover:shadow-xl hover:shadow-yellow-500/5">
+                    <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-yellow-500/10 text-yellow-500">
+                        <i class="fa-solid fa-helmet-safety text-xl"></i>
+                    </div>
+                    <h3 class="mt-4 text-lg font-semibold text-white">Direito Trabalhista</h3>
+                    <p class="mt-2 text-yellow-100/50">
+                        Proteção jurídica trabalhista de excelência com o Dr. Wesley Oliveira Melo, especialista em relações de trabalho para empresas e colaboradores. Oferecemos consultoria preventiva empresarial, defesa em reclamações trabalhistas, gestão de passivo trabalhista e planejamento estratégico que minimiza riscos e otimiza recursos humanos.
+                    </p>
+                </article>
+
+                <!-- Card - Direito Tributário -->
+                <article class="group rounded-2xl border border-yellow-900/40 bg-zinc-950 p-6 transition hover:-translate-y-1 hover:border-yellow-600/50 hover:shadow-xl hover:shadow-yellow-500/5">
+                    <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-yellow-500/10 text-yellow-500">
+                        <i class="fa-solid fa-file-invoice-dollar text-xl"></i>
+                    </div>
+                    <h3 class="mt-4 text-lg font-semibold text-white">Direito Tributário</h3>
+                    <p class="mt-2 text-yellow-100/50">
+                        Planejamento tributário estratégico e defesa fiscal com o Dr. Wesley Oliveira Melo, garantindo conformidade e eficiência fiscal de pessoas físicas e jurídicas. Atuamos em consultoria preventiva, impugnações administrativas, execuções fiscais e recuperação de créditos tributários, reduzindo a carga fiscal dentro dos limites legais.
+                    </p>
+                </article>
+
+                <!-- Card - Crimes Cibernéticos -->
+                <article class="group rounded-2xl border border-yellow-900/40 bg-zinc-950 p-6 transition hover:-translate-y-1 hover:border-yellow-600/50 hover:shadow-xl hover:shadow-yellow-500/5">
+                    <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-yellow-500/10 text-yellow-500">
+                        <i class="fa-solid fa-shield-halved text-xl"></i>
+                    </div>
+                    <h3 class="mt-4 text-lg font-semibold text-white">Defesa de Crimes Cibernéticos e Perícia Digital</h3>
+                    <p class="mt-2 text-yellow-100/50">
+                        Atuação especializada na defesa de acusados em crimes cibernéticos e na análise pericial de evidências digitais. O Dr. Wesley Oliveira Melo combina conhecimento jurídico com domínio técnico para atuar em casos de fraudes eletrônicas, invasão de sistemas, estelionato digital e violação de dados.
+                    </p>
+                </article>
+
+                <!-- Card - Inventários -->
+                <article class="group rounded-2xl border border-yellow-900/40 bg-zinc-950 p-6 transition hover:-translate-y-1 hover:border-yellow-600/50 hover:shadow-xl hover:shadow-yellow-500/5">
+                    <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-yellow-500/10 text-yellow-500">
+                        <i class="fa-solid fa-scroll text-xl"></i>
+                    </div>
+                    <h3 class="mt-4 text-lg font-semibold text-white">Inventários</h3>
+                    <p class="mt-2 text-yellow-100/50">
+                        Assessoria completa em processos de inventário judicial e extrajudicial, partilha de bens e planejamento sucessório. O Dr. Wesley Oliveira Melo conduz cada caso com agilidade e sensibilidade, orientando herdeiros em todos os trâmites legais, desde o arrolamento de bens até a transferência definitiva do patrimônio.
+                    </p>
+                </article>
+
+                <!-- Card - Direito Criminal -->
+                <article class="group rounded-2xl border border-yellow-900/40 bg-zinc-950 p-6 transition hover:-translate-y-1 hover:border-yellow-600/50 hover:shadow-xl hover:shadow-yellow-500/5 sm:col-span-2 lg:col-span-1">
+                    <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-yellow-500/10 text-yellow-500">
+                        <i class="fa-solid fa-handcuffs text-xl"></i>
+                    </div>
+                    <h3 class="mt-4 text-lg font-semibold text-white">Direito Criminal</h3>
+                    <p class="mt-2 text-yellow-100/50">
+                        Defesa criminal técnica e humanizada com o Dr. Wesley Oliveira Melo, atuando em todas as fases do processo penal — desde a fase investigativa até os tribunais superiores. Nossa atuação abrange crimes contra o patrimônio, crimes econômicos, tráfico, homicídio e demais infrações penais.
+                    </p>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= LOCALIZAÇÃO ================= -->
+    <section id="localizacao" class="border-b border-yellow-900/30 bg-zinc-950 py-20 sm:py-24">
+        <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+
+            <div class="mx-auto max-w-2xl text-center">
+                <h2 class="text-3xl font-bold tracking-tight text-white sm:text-4xl">
+                    Nossa <span class="gold-text">Localização</span>
+                </h2>
+                <div class="gold-divider mx-auto mt-4 max-w-xs"></div>
+                <p class="mt-4 text-lg text-yellow-100/50">
+                    Venha nos visitar ou entre em contato pelo WhatsApp
+                </p>
+            </div>
+
+            <div class="mt-12 grid gap-8 lg:grid-cols-2">
+
+                <!-- Informações -->
+                <div class="flex flex-col justify-center gap-6">
+
+                    <div class="rounded-2xl border border-yellow-900/40 bg-black p-6">
+                        <div class="flex items-start gap-4">
+                            <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-yellow-500/10 text-yellow-500">
+                                <i class="fa-solid fa-location-dot text-xl"></i>
+                            </div>
+                            <div>
+                                <p class="font-semibold text-yellow-400">Endereço</p>
+                                <p class="mt-1 text-yellow-100/70">Rua Pará, 3094</p>
+                                <p class="text-yellow-100/70">Chácara Aviação — Votuporanga, SP</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="rounded-2xl border border-yellow-900/40 bg-black p-6">
+                        <div class="flex items-start gap-4">
+                            <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-yellow-500/10 text-yellow-500">
+                                <i class="fa-brands fa-whatsapp text-xl"></i>
+                            </div>
+                            <div>
+                                <p class="font-semibold text-yellow-400">WhatsApp</p>
+                                <a href="https://wa.me/5517997413122" target="_blank" class="mt-1 block text-yellow-100/70 transition hover:text-yellow-400">
+                                    (17) 99741-3122 — São Paulo
+                                </a>
+                                <a href="https://wa.me/5547992393122" target="_blank" class="mt-1 block text-yellow-100/70 transition hover:text-yellow-400">
+                                    (47) 99239-3122 — Santa Catarina
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="rounded-2xl border border-yellow-900/40 bg-black p-6">
+                        <div class="flex items-start gap-4">
+                            <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-yellow-500/10 text-yellow-500">
+                                <i class="fa-solid fa-share-nodes text-xl"></i>
+                            </div>
+                            <div>
+                                <p class="font-semibold text-yellow-400">Redes Sociais</p>
+                                <a href="https://www.instagram.com/dr.wesleymelo" target="_blank" class="mt-1 block text-yellow-100/70 transition hover:text-yellow-400">
+                                    <i class="fa-brands fa-instagram mr-2"></i>Instagram
+                                </a>
+                                <a href="https://www.linkedin.com/in/wesley-melo-67465784" target="_blank" class="mt-1 block text-yellow-100/70 transition hover:text-yellow-400">
+                                    <i class="fa-brands fa-linkedin mr-2"></i>LinkedIn
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mapa embed -->
+                <div class="overflow-hidden rounded-2xl border border-yellow-900/40 shadow-xl shadow-black/40" style="min-height: 380px;">
+                    <iframe
+                        src="https://www.google.com/maps?q=Rua+Pará+3094+Chácara+Aviação+Votuporanga+SP&output=embed"
+                        width="100%"
+                        height="100%"
+                        style="border:0; min-height: 380px;"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"
+                        title="Localização WOM Advocacia"
+                    ></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+    <footer id="footer" class="border-t border-yellow-900/30 bg-black py-12">
+        <div class="mx-auto grid max-w-6xl gap-10 px-4 sm:px-6 md:grid-cols-3 lg:px-8">
+
+            <div class="md:col-span-2">
+                <p class="text-lg font-bold text-white">
+                    WOM<span class="gold-text"> Advogados</span>
+                </p>
+                <p class="mt-3 max-w-sm text-sm text-yellow-100/50">
+                    Escritório de advocacia especializado em diversas áreas do Direito, com sede em Votuporanga-SP.
+                </p>
+                <p class="mt-2 text-sm text-yellow-100/40">
+                    Rua Pará, 3094 — Chácara Aviação, Votuporanga-SP
+                </p>
+            </div>
+
+            <div>
+                <p class="text-xs font-semibold uppercase tracking-wider text-yellow-600">
+                    Contatos
+                </p>
+                <ul class="mt-4 space-y-2 text-sm">
+                    <li>
+                        <a href="https://www.instagram.com/dr.wesleymelo" target="_blank" class="text-yellow-100/60 transition hover:text-yellow-400">
+                            <i class="fa-brands fa-instagram mr-2"></i>Instagram
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/in/wesley-melo-67465784" target="_blank" class="text-yellow-100/60 transition hover:text-yellow-400">
+                            <i class="fa-brands fa-linkedin mr-2"></i>LinkedIn
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://wa.me/5517997413122" target="_blank" class="text-yellow-100/60 transition hover:text-yellow-400">
+                            <i class="fa-brands fa-whatsapp mr-2"></i>WhatsApp — São Paulo
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://wa.me/5547992393122" target="_blank" class="text-yellow-100/60 transition hover:text-yellow-400">
+                            <i class="fa-brands fa-whatsapp mr-2"></i>WhatsApp — Santa Catarina
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="gold-divider mx-auto mt-10 max-w-6xl px-4 sm:px-6 lg:px-8"></div>
+
+        <p class="mx-auto mt-6 max-w-6xl px-4 text-center text-xs text-yellow-900 sm:px-6 lg:px-8">
+            © 2026 Wesley de Oliveira Melo — Todos os direitos reservados.
+        </p>
+    </footer>
+
+</body>
+</html>
