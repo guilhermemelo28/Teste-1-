@@ -16,4 +16,7 @@
     height: 2px;
     background: linear-gradient(90deg, transparent, #f59e0b, transparent);
 }
- 
+/* === SCROLL PARA CIMA ===*/
+    html {
+    scroll-behavior: smooth;
+}
