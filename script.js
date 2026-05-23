@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", function () {
 document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("ano").textContent = new Date().getFullYear();
 });
-// ===== BOTÃO FLUTUANTE WHATSAPP =====
+// ===== BOTÃO FLUTUANTE WHATSAPP ===== //
 document.addEventListener("DOMContentLoaded", function () {
     const btn = document.createElement("a");
     btn.href = "https://wa.me/5517997413122";
