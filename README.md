@@ -1,4 +1,6 @@
-# # 🚀 Projeto Profissional
+# 🚀 WOM Advogados — Site Institucional
+
+Site institucional do escritório **WOM Advogados (Dr. Wesley Oliveira Melo)**, de Votuporanga-SP, publicado em [womadv.com](https://womadv.com).
 
 Projeto desenvolvido com foco em design moderno, responsividade e experiência do usuário, apresentando uma interface limpa, elegante e otimizada para diferentes dispositivos.
 
@@ -30,7 +32,9 @@ A aplicação possui:
 - ✅ Efeitos visuais suaves
 - ✅ Hover animations
 - ✅ Favicon personalizado
-- ✅ Estrutura otimizada
+- ✅ Botão flutuante do WhatsApp
+- ✅ Ano automático no rodapé
+- ✅ SEO e Open Graph (preview em redes sociais)
 
 ## 📱 Responsividade
 
@@ -42,15 +46,23 @@ O projeto foi desenvolvido pensando em diferentes tamanhos de tela:
 
 ## 📂 Estrutura do Projeto
 
-```bash
-📦 projeto
+```text
+📦 Teste-1-
  ┣ 📂 assets
- ┣ 📂 images
+ ┃ ┗ 📂 imagens
+ ┃   ┣ 📜 logo.png
+ ┃   ┗ 📜 fotopai.jpg
  ┣ 📜 index.html
  ┣ 📜 style.css
  ┣ 📜 script.js
+ ┣ 📜 site.webmanifest
+ ┣ 📜 favicon.ico / favicon.svg / favicon-96x96.png
+ ┣ 📜 apple-touch-icon.png
+ ┣ 📜 web-app-manifest-192x192.png / 512x512.png
+ ┣ 📜 CNAME
  ┗ 📜 README.md
+```
 
- ##👨‍💻 Autor
+## 👨‍💻 Autor
 
 Desenvolvido por Guilherme Melo.
