@@ -1,10 +1,10 @@
-# 🚀 WOM Advogados — Site Institucional
+#  WOM Advogados — Site Institucional
 
 Site institucional do escritório **WOM Advogados (Dr. Wesley Oliveira Melo)**, de Votuporanga-SP, publicado em [womadv.com](https://womadv.com).
 
 Projeto desenvolvido com foco em design moderno, responsividade e experiência do usuário, apresentando uma interface limpa, elegante e otimizada para diferentes dispositivos.
 
-## 📌 Sobre o Projeto
+##  Sobre o Projeto
 
 Este projeto foi criado com o objetivo de demonstrar habilidades em desenvolvimento web, organização visual e construção de interfaces modernas.
 
@@ -17,7 +17,7 @@ A aplicação possui:
 - Componentes reutilizáveis
 - Design otimizado para desktop e mobile
 
-## 🛠️ Tecnologias Utilizadas
+##  Tecnologias Utilizadas
 
 - HTML5
 - CSS3
@@ -25,7 +25,7 @@ A aplicação possui:
 - TailwindCSS
 - Git & GitHub
 
-## 🎨 Funcionalidades
+##  Funcionalidades
 
 - ✅ Navbar responsiva
 - ✅ Seções organizadas
@@ -36,7 +36,7 @@ A aplicação possui:
 - ✅ Ano automático no rodapé
 - ✅ SEO e Open Graph (preview em redes sociais)
 
-## 📱 Responsividade
+##  Responsividade
 
 O projeto foi desenvolvido pensando em diferentes tamanhos de tela:
 
@@ -44,7 +44,7 @@ O projeto foi desenvolvido pensando em diferentes tamanhos de tela:
 - Tablet
 - Smartphone
 
-## 📂 Estrutura do Projeto
+##  Estrutura do Projeto
 
 ```text
 📦 Teste-1-
@@ -67,15 +67,7 @@ O projeto foi desenvolvido pensando em diferentes tamanhos de tela:
  ┗ 📜 README.md
 ```
 
-## ⚙️ Gerando o CSS do Tailwind
 
-O Tailwind é compilado (não usa mais o CDN). Sempre que adicionar ou mudar classes no `index.html`, gere o CSS de novo:
-
-```bash
-npx tailwindcss@3 -c tailwind.config.js -i src/input.css -o tailwind.css --minify
-```
-
-Sem Node, dá para usar o [binário standalone do Tailwind CLI v3](https://github.com/tailwindlabs/tailwindcss/releases/tag/v3.4.17) com os mesmos parâmetros.
 
 ## 👨‍💻 Autor
 
