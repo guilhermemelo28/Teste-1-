@@ -52,7 +52,11 @@ O projeto foi desenvolvido pensando em diferentes tamanhos de tela:
  ┃ ┗ 📂 imagens
  ┃   ┣ 📜 logo.png
  ┃   ┗ 📜 fotopai.jpg
+ ┣ 📂 src
+ ┃ ┗ 📜 input.css      (entrada do Tailwind)
  ┣ 📜 index.html
+ ┣ 📜 tailwind.css      (CSS gerado — não editar à mão)
+ ┣ 📜 tailwind.config.js
  ┣ 📜 style.css
  ┣ 📜 script.js
  ┣ 📜 site.webmanifest
@@ -62,6 +66,16 @@ O projeto foi desenvolvido pensando em diferentes tamanhos de tela:
  ┣ 📜 CNAME
  ┗ 📜 README.md
 ```
+
+## ⚙️ Gerando o CSS do Tailwind
+
+O Tailwind é compilado (não usa mais o CDN). Sempre que adicionar ou mudar classes no `index.html`, gere o CSS de novo:
+
+```bash
+npx tailwindcss@3 -c tailwind.config.js -i src/input.css -o tailwind.css --minify
+```
+
+Sem Node, dá para usar o [binário standalone do Tailwind CLI v3](https://github.com/tailwindlabs/tailwindcss/releases/tag/v3.4.17) com os mesmos parâmetros.
 
 ## 👨‍💻 Autor
 
