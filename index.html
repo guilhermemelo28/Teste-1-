@@ -1,4 +1,4 @@
-
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8" />
@@ -6,12 +6,12 @@
     <meta name="description" content="WOM Escritório de Advocacia - Dr. Wesley Oliveira Melo. Especializado em Direito Empresarial, Civil, Trabalhista, Tributário, Criminal e mais. Votuporanga-SP." />
     <title>WOM Advogados - Dr. Wesley Oliveira Melo</title>
     <link rel="canonical" href="https://womadv.com/">
- 
+
     <!-- SEO -->
     <meta name="keywords" content=" wesley melo,wesley melo advogado,advogado Votuporanga, direito empresarial, direito criminal, direito trabalhista, direito civil, inventário, crimes cibernéticos, Wesley Melo, WOM advogados" />
     <meta name="author" content="Dr. Wesley Oliveira Melo" />
     <meta name="robots" content="index, follow" />
- 
+
     <!-- Open Graph (preview no WhatsApp, Instagram, LinkedIn) -->
     <meta property="og:type" content="website" />
     <meta property="og:title" content="WOM Advogados - Dr. Wesley Oliveira Melo" />
@@ -19,231 +19,264 @@
     <meta property="og:image" content="https://womadv.com/logo.png" />
     <meta property="og:url" content="https://womadv.com" />
     <meta property="og:locale" content="pt_BR" />
- 
+
     <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="manifest" href="/site.webmanifest">
-    
-    <!-- Google Fonts -->
+
+    <!-- Google Fonts (só os pesos usados) -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
- 
+
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
- 
+
     <!-- Tailwind (deve vir antes do script.js) -->
     <script src="https://cdn.tailwindcss.com"></script>
- 
+
     <!-- Config Tailwind + comportamentos JS -->
     <script src="script.js"></script>
- 
+
     <!-- CSS personalizado -->
     <link rel="stylesheet" href="style.css" />
 </head>
- 
-<body class="min-h-screen bg-black font-sans text-slate-100 antialiased">
- 
+
+<body class="min-h-screen bg-black font-sans text-zinc-300 antialiased">
+
     <!-- ================= HEADER ================= -->
-    <header class="sticky top-0 z-50 border-b border-yellow-900/40 bg-black/90 backdrop-blur-xl">
-        <div class="mx-auto flex max-w-6xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
- 
-            <a href="#" class="flex items-center">
-                <img src="assets/imagens/logo.png" alt="Logo WOM Advogados" width="180" height="96" class="h-24 w-auto transition hover:scale-105" />
+    <header class="sticky top-0 z-50 border-b border-gold-900/40 bg-black/90 backdrop-blur-xl">
+        <div class="mx-auto flex max-w-6xl items-center justify-between px-4 py-2 sm:px-6 lg:px-8">
+
+            <a href="#" class="flex items-center" aria-label="WOM Advogados, voltar ao início">
+                <img src="assets/imagens/logo.png" alt="Logo WOM Advogados" width="250" height="100" class="h-16 w-auto motion-safe:transition motion-safe:hover:scale-105 md:h-24" />
             </a>
- 
+
             <nav class="hidden items-center gap-8 md:flex" aria-label="Principal">
-                <a href="#features" class="text-sm font-medium text-yellow-200/70 transition hover:text-yellow-400">Serviços</a>
-                <a href="#localizacao" class="text-sm font-medium text-yellow-200/70 transition hover:text-yellow-400">Localização</a>
-                <a href="#footer" class="text-sm font-medium text-yellow-200/70 transition hover:text-yellow-400">Contato</a>
+                <a href="#sobre" class="text-sm font-medium text-zinc-300 motion-safe:transition hover:text-gold-400">Sobre Nós</a>
+                <a href="#features" class="text-sm font-medium text-zinc-300 motion-safe:transition hover:text-gold-400">Serviços</a>
+                <a href="#localizacao" class="text-sm font-medium text-zinc-300 motion-safe:transition hover:text-gold-400">Localização</a>
+                <a href="#footer" class="text-sm font-medium text-zinc-300 motion-safe:transition hover:text-gold-400">Contato</a>
             </nav>
- 
-            <details class="relative md:hidden">
-                <summary class="flex cursor-pointer list-none items-center justify-center rounded-xl border border-yellow-800/50 bg-black p-2 text-yellow-500 transition hover:border-yellow-500/70 hover:bg-yellow-950/30 [&::-webkit-details-marker]:hidden" aria-label="Abrir menu">
-                    <i class="fa-solid fa-bars text-lg"></i>
+
+            <details id="menu-mobile" class="relative md:hidden">
+                <summary class="flex cursor-pointer list-none items-center justify-center rounded-xl border border-gold-800/50 bg-black p-2 text-gold-500 motion-safe:transition hover:border-gold-500/70 hover:bg-gold-950/30 [&::-webkit-details-marker]:hidden" aria-label="Abrir menu">
+                    <i class="fa-solid fa-bars text-lg" aria-hidden="true"></i>
                 </summary>
-                <nav class="absolute right-0 top-14 z-50 flex min-w-[220px] flex-col overflow-hidden rounded-2xl border border-yellow-900/40 bg-black shadow-2xl shadow-black/50" aria-label="Principal Mobile">
-                    <a href="#features" class="px-5 py-3 text-sm font-medium text-yellow-200/70 transition hover:bg-yellow-950/30 hover:text-yellow-400">Serviços</a>
-                    <a href="#localizacao" class="px-5 py-3 text-sm font-medium text-yellow-200/70 transition hover:bg-yellow-950/30 hover:text-yellow-400">Localização</a>
-                    <a href="#footer" class="px-5 py-3 text-sm font-medium text-yellow-200/70 transition hover:bg-yellow-950/30 hover:text-yellow-400">Contato</a>
+                <nav class="absolute right-0 top-12 z-50 flex min-w-[220px] flex-col overflow-hidden rounded-2xl border border-gold-900/40 bg-black shadow-2xl shadow-black/50" aria-label="Principal Mobile">
+                    <a href="#sobre" class="px-5 py-3 text-sm font-medium text-zinc-300 motion-safe:transition hover:bg-gold-950/30 hover:text-gold-400">Sobre Nós</a>
+                    <a href="#features" class="px-5 py-3 text-sm font-medium text-zinc-300 motion-safe:transition hover:bg-gold-950/30 hover:text-gold-400">Serviços</a>
+                    <a href="#localizacao" class="px-5 py-3 text-sm font-medium text-zinc-300 motion-safe:transition hover:bg-gold-950/30 hover:text-gold-400">Localização</a>
+                    <a href="#footer" class="px-5 py-3 text-sm font-medium text-zinc-300 motion-safe:transition hover:bg-gold-950/30 hover:text-gold-400">Contato</a>
                 </nav>
             </details>
         </div>
     </header>
- 
-    <!-- ================= HERO ================= -->
-    <section class="relative overflow-hidden border-b border-yellow-900/30 bg-black py-20 sm:py-24">
- 
+
+    <!-- ================= SOBRE NÓS (ABERTURA) ================= -->
+    <section id="sobre" class="relative overflow-hidden border-b border-gold-900/30 bg-black py-14 sm:py-24">
+
         <div class="pointer-events-none absolute inset-0 overflow-hidden" aria-hidden="true">
-            <div class="absolute -left-32 top-0 h-96 w-96 rounded-full bg-yellow-600/5 blur-3xl"></div>
-            <div class="absolute -right-32 bottom-0 h-96 w-96 rounded-full bg-yellow-500/5 blur-3xl"></div>
+            <div class="absolute -left-32 top-0 h-96 w-96 rounded-full bg-gold-600/5 blur-3xl"></div>
+            <div class="absolute -right-32 bottom-0 h-96 w-96 rounded-full bg-gold-500/5 blur-3xl"></div>
         </div>
- 
+
         <div class="relative mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-            <div class="grid min-h-[70vh] items-center gap-16 lg:grid-cols-2">
- 
+            <div class="grid items-center gap-12 lg:min-h-[70vh] lg:grid-cols-2 lg:gap-16">
+
                 <div>
-                    <p class="text-sm font-semibold uppercase tracking-[0.3em] text-yellow-500">Sobre Nós</p>
- 
-                    <h1 class="mt-6 text-5xl font-extrabold leading-tight tracking-tight text-white lg:text-6xl">
+                    <p class="text-sm font-semibold uppercase tracking-[0.3em] text-gold-500">Sobre Nós</p>
+
+                    <h1 class="mt-6 text-4xl font-extrabold leading-tight tracking-tight text-white sm:text-5xl lg:text-6xl">
                         Mais de <span class="gold-text">8 anos</span> de experiência na área jurídica
                     </h1>
- 
+
+                    <p class="mt-4 text-xl font-semibold text-gold-200">Dr. Wesley Oliveira Melo, advogado em Votuporanga-SP</p>
+
                     <div class="gold-divider my-6 max-w-xs"></div>
- 
-                    <p class="mt-2 max-w-xl text-lg leading-relaxed text-yellow-100/60">
-                        O Escritório WOM nasceu da visão do Dr. Wesley Oliveira Melo de oferecer serviços jurídicos de excelência com atendimento personalizado e resultados concretos. Fundado com base nos princípios de ética, transparência e dedicação, nosso escritório tem se consolidado como referência em diversas áreas do Direito.
+
+                    <p class="max-w-xl text-lg leading-relaxed text-zinc-300">
+                        O Escritório WOM nasceu da visão do Dr. Wesley Oliveira Melo de oferecer atendimento jurídico personalizado. Fundado com base nos princípios de ética, transparência e dedicação, o escritório atua em diversas áreas do Direito: civil, trabalhista, criminal, tributário, empresarial, inventários e crimes cibernéticos.
                     </p>
- 
+
                     <div class="mt-10 flex flex-wrap gap-4">
-                        <a href="#localizacao" class="rounded-full border border-yellow-600 bg-yellow-500 px-8 py-4 font-semibold text-black shadow-lg shadow-yellow-500/20 transition duration-200 hover:bg-yellow-400 hover:shadow-yellow-400/40">
-                            Entrar em contato
+                        <a href="https://wa.me/5517997413122?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20uma%20orienta%C3%A7%C3%A3o." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 rounded-full border border-gold-600 bg-gold-500 px-8 py-4 font-semibold text-black shadow-lg shadow-gold-500/20 motion-safe:transition motion-safe:duration-200 hover:bg-gold-400 hover:shadow-gold-400/40">
+                            <i class="fa-brands fa-whatsapp text-lg" aria-hidden="true"></i>
+                            Falar no WhatsApp
+                        </a>
+                        <a href="tel:+5517997413122" class="inline-flex items-center gap-2 rounded-full border border-gold-600 px-8 py-4 font-semibold text-gold-400 motion-safe:transition motion-safe:duration-200 hover:bg-gold-950/40 hover:text-gold-200">
+                            <i class="fa-solid fa-phone text-sm" aria-hidden="true"></i>
+                            Ligar
                         </a>
                     </div>
                 </div>
- 
-                <div class="relative overflow-hidden rounded-3xl border border-yellow-800/30 shadow-2xl shadow-black/60">
-                    <img src="assets/imagens/fotopai.jpg" alt="Dr. Wesley Oliveira Melo" width="600" height="700" class="h-full w-full object-cover" />
-                    <div class="pointer-events-none absolute inset-0 rounded-3xl" style="box-shadow: inset 0 0 60px rgba(217,119,6,0.15);" aria-hidden="true"></div>
+
+                <div class="relative mx-auto w-full max-w-md overflow-hidden rounded-3xl border border-gold-800/30 shadow-2xl shadow-black/60 lg:max-w-none">
+                    <img src="assets/imagens/fotopai.jpg" alt="Dr. Wesley Oliveira Melo" width="400" height="400" class="aspect-square h-full w-full object-cover" />
+                    <div class="pointer-events-none absolute inset-0 rounded-3xl" style="box-shadow: inset 0 0 60px rgba(202,138,4,0.15);" aria-hidden="true"></div>
                 </div>
             </div>
         </div>
     </section>
- 
-    <!--- ================= SERVIÇOS ================= --->
-    <section id="features" class="border-b border-yellow-900/30 bg-black py-20 sm:py-24">
+
+    <!-- ================= SERVIÇOS ================= -->
+    <section id="features" class="border-b border-gold-900/30 bg-black py-20 sm:py-24">
         <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
- 
+
             <div class="mx-auto max-w-2xl text-center">
                 <h2 class="text-3xl font-bold tracking-tight text-white sm:text-4xl">
                     Nossos <span class="gold-text">serviços</span> ofertados
                 </h2>
                 <div class="gold-divider mx-auto mt-4 max-w-xs"></div>
-                <p class="mt-4 text-lg text-yellow-100/50">Áreas de atuação do escritório WOM Advogados & Associados</p>
+                <p class="mt-4 text-lg text-zinc-400">Áreas de atuação do escritório WOM Advogados & Associados. Toque na área do seu caso para conversar pelo WhatsApp.</p>
             </div>
- 
-            <div class="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
- 
-                <article class="group rounded-2xl border border-yellow-900/40 bg-zinc-950 p-6 transition hover:-translate-y-1 hover:border-yellow-600/50 hover:shadow-xl hover:shadow-yellow-500/5">
-                    <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-yellow-500/10 text-yellow-500">
-                        <i class="fa-solid fa-briefcase text-xl" aria-hidden="true"></i>
-                    </div>
-                    <h3 class="mt-4 text-lg font-semibold text-white">Direito Empresarial</h3>
-                    <p class="mt-2 text-yellow-100/50">Assessoria jurídica especializada para empresas em contratos comerciais, fusões e aquisições, compliance empresarial e planejamento societário, com abordagem estratégica que protege patrimônios e potencializa resultados.</p>
-                </article>
- 
-                <article class="group rounded-2xl border border-yellow-900/40 bg-zinc-950 p-6 transition hover:-translate-y-1 hover:border-yellow-600/50 hover:shadow-xl hover:shadow-yellow-500/5">
-                    <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-yellow-500/10 text-yellow-500">
+
+            <!-- 7 áreas + 1 card de dúvida = 8 cards: fecha 2 colunas (tablet) e 4 colunas (desktop) sem card órfão -->
+            <div class="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+
+                <a href="https://wa.me/5517997413122?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20uma%20orienta%C3%A7%C3%A3o%20sobre%20Direito%20Civil." target="_blank" rel="noopener noreferrer" class="area-card group flex flex-col rounded-2xl border border-gold-900/40 bg-zinc-950 p-6 hover:border-gold-600/50 hover:shadow-xl hover:shadow-gold-500/5">
+                    <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-gold-500/10 text-gold-500">
                         <i class="fa-solid fa-scale-balanced text-xl" aria-hidden="true"></i>
                     </div>
                     <h3 class="mt-4 text-lg font-semibold text-white">Direito Civil</h3>
-                    <p class="mt-2 text-yellow-100/50">Soluções em questões patrimoniais, contratuais e familiares. Representação em ações indenizatórias, disputas contratuais, direito imobiliário e sucessões com comunicação transparente.</p>
-                </article>
- 
-                <article class="group rounded-2xl border border-yellow-900/40 bg-zinc-950 p-6 transition hover:-translate-y-1 hover:border-yellow-600/50 hover:shadow-xl hover:shadow-yellow-500/5">
-                    <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-yellow-500/10 text-yellow-500">
+                    <p class="mt-2 flex-1 text-zinc-400">Quando você sofreu um prejuízo e quer ser indenizado, tem um contrato que não foi cumprido, um problema com imóvel ou uma questão de família ou de herança.</p>
+                </a>
+
+                <a href="https://wa.me/5517997413122?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20uma%20orienta%C3%A7%C3%A3o%20sobre%20Direito%20Trabalhista." target="_blank" rel="noopener noreferrer" class="area-card group flex flex-col rounded-2xl border border-gold-900/40 bg-zinc-950 p-6 hover:border-gold-600/50 hover:shadow-xl hover:shadow-gold-500/5">
+                    <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-gold-500/10 text-gold-500">
                         <i class="fa-solid fa-helmet-safety text-xl" aria-hidden="true"></i>
                     </div>
                     <h3 class="mt-4 text-lg font-semibold text-white">Direito Trabalhista</h3>
-                    <p class="mt-2 text-yellow-100/50">Proteção jurídica trabalhista para empresas e colaboradores. Consultoria preventiva, defesa em reclamações trabalhistas e planejamento estratégico que minimiza riscos.</p>
-                </article>
- 
-                <article class="group rounded-2xl border border-yellow-900/40 bg-zinc-950 p-6 transition hover:-translate-y-1 hover:border-yellow-600/50 hover:shadow-xl hover:shadow-yellow-500/5">
-                    <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-yellow-500/10 text-yellow-500">
-                        <i class="fa-solid fa-file-invoice-dollar text-xl" aria-hidden="true"></i>
-                    </div>
-                    <h3 class="mt-4 text-lg font-semibold text-white">Direito Tributário</h3>
-                    <p class="mt-2 text-yellow-100/50">Planejamento tributário estratégico e defesa fiscal para pessoas físicas e jurídicas. Consultoria preventiva, impugnações administrativas e recuperação de créditos tributários.</p>
-                </article>
- 
-                <article class="group rounded-2xl border border-yellow-900/40 bg-zinc-950 p-6 transition hover:-translate-y-1 hover:border-yellow-600/50 hover:shadow-xl hover:shadow-yellow-500/5">
-                    <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-yellow-500/10 text-yellow-500">
+                    <p class="mt-2 flex-1 text-zinc-400">Para o trabalhador com um problema no emprego e para a empresa que quer evitar processos ou precisa se defender em uma reclamação trabalhista.</p>
+                </a>
+
+                <a href="https://wa.me/5517997413122?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20uma%20orienta%C3%A7%C3%A3o%20sobre%20Direito%20Criminal." target="_blank" rel="noopener noreferrer" class="area-card group flex flex-col rounded-2xl border border-gold-900/40 bg-zinc-950 p-6 hover:border-gold-600/50 hover:shadow-xl hover:shadow-gold-500/5">
+                    <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-gold-500/10 text-gold-500">
                         <i class="fa-solid fa-shield-halved text-xl" aria-hidden="true"></i>
                     </div>
+                    <h3 class="mt-4 text-lg font-semibold text-white">Direito Criminal</h3>
+                    <p class="mt-2 flex-1 text-zinc-400">Quando você ou alguém próximo está sendo investigado ou processado. Defesa em todas as fases do processo, em casos como crimes contra o patrimônio, crimes econômicos, tráfico e homicídio.</p>
+                </a>
+
+                <a href="https://wa.me/5517997413122?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20uma%20orienta%C3%A7%C3%A3o%20sobre%20crimes%20cibern%C3%A9ticos." target="_blank" rel="noopener noreferrer" class="area-card group flex flex-col rounded-2xl border border-gold-900/40 bg-zinc-950 p-6 hover:border-gold-600/50 hover:shadow-xl hover:shadow-gold-500/5">
+                    <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-gold-500/10 text-gold-500">
+                        <i class="fa-solid fa-laptop-code text-xl" aria-hidden="true"></i>
+                    </div>
                     <h3 class="mt-4 text-lg font-semibold text-white">Defesa de Crimes Cibernéticos e Perícia Digital</h3>
-                    <p class="mt-2 text-yellow-100/50">Defesa especializada em crimes cibernéticos e análise pericial de evidências digitais. Atuação em fraudes eletrônicas, invasão de sistemas, estelionato digital e violação de dados.</p>
-                </article>
- 
-                <article class="group rounded-2xl border border-yellow-900/40 bg-zinc-950 p-6 transition hover:-translate-y-1 hover:border-yellow-600/50 hover:shadow-xl hover:shadow-yellow-500/5">
-                    <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-yellow-500/10 text-yellow-500">
+                    <p class="mt-2 flex-1 text-zinc-400">Quando o caso envolve internet: fraude eletrônica, invasão de sistemas, estelionato digital ou violação de dados. Inclui a análise pericial das provas digitais.</p>
+                </a>
+
+                <a href="https://wa.me/5517997413122?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20uma%20orienta%C3%A7%C3%A3o%20sobre%20invent%C3%A1rio." target="_blank" rel="noopener noreferrer" class="area-card group flex flex-col rounded-2xl border border-gold-900/40 bg-zinc-950 p-6 hover:border-gold-600/50 hover:shadow-xl hover:shadow-gold-500/5">
+                    <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-gold-500/10 text-gold-500">
                         <i class="fa-solid fa-scroll text-xl" aria-hidden="true"></i>
                     </div>
                     <h3 class="mt-4 text-lg font-semibold text-white">Inventários</h3>
-                    <p class="mt-2 text-yellow-100/50">Assessoria completa em inventário judicial e extrajudicial, partilha de bens e planejamento sucessório. Orientação aos herdeiros em todos os trâmites legais com agilidade.</p>
-                </article>
- 
-                <article class="group rounded-2xl border border-yellow-900/40 bg-zinc-950 p-6 transition hover:-translate-y-1 hover:border-yellow-600/50 hover:shadow-xl hover:shadow-yellow-500/5 sm:col-span-2 lg:col-span-1">
-                    <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-yellow-500/10 text-yellow-500">
-                        <i class="fa-solid fa-handcuffs text-xl" aria-hidden="true"></i>
+                    <p class="mt-2 flex-1 text-zinc-400">Quando alguém da família faleceu e é preciso fazer o inventário e a partilha dos bens, em cartório ou na Justiça. Também para quem quer planejar em vida como o patrimônio vai passar aos herdeiros.</p>
+                </a>
+
+                <a href="https://wa.me/5517997413122?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20uma%20orienta%C3%A7%C3%A3o%20sobre%20Direito%20Empresarial." target="_blank" rel="noopener noreferrer" class="area-card group flex flex-col rounded-2xl border border-gold-900/40 bg-zinc-950 p-6 hover:border-gold-600/50 hover:shadow-xl hover:shadow-gold-500/5">
+                    <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-gold-500/10 text-gold-500">
+                        <i class="fa-solid fa-briefcase text-xl" aria-hidden="true"></i>
                     </div>
-                    <h3 class="mt-4 text-lg font-semibold text-white">Direito Criminal</h3>
-                    <p class="mt-2 text-yellow-100/50">Defesa criminal técnica e humanizada em todas as fases do processo penal. Atuação em crimes contra o patrimônio, crimes econômicos, tráfico, homicídio e demais infrações penais.</p>
-                </article>
- 
+                    <h3 class="mt-4 text-lg font-semibold text-white">Direito Empresarial</h3>
+                    <p class="mt-2 flex-1 text-zinc-400">Para quem tem empresa e precisa de contratos comerciais, organizar a sociedade entre os sócios, comprar, vender ou unir empresas, ou deixar o negócio em dia com as regras (compliance).</p>
+                </a>
+
+                <a href="https://wa.me/5517997413122?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20uma%20orienta%C3%A7%C3%A3o%20sobre%20Direito%20Tribut%C3%A1rio." target="_blank" rel="noopener noreferrer" class="area-card group flex flex-col rounded-2xl border border-gold-900/40 bg-zinc-950 p-6 hover:border-gold-600/50 hover:shadow-xl hover:shadow-gold-500/5">
+                    <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-gold-500/10 text-gold-500">
+                        <i class="fa-solid fa-file-invoice-dollar text-xl" aria-hidden="true"></i>
+                    </div>
+                    <h3 class="mt-4 text-lg font-semibold text-white">Direito Tributário</h3>
+                    <p class="mt-2 flex-1 text-zinc-400">Quando você ou sua empresa recebeu uma cobrança ou autuação do fisco, quer pagar menos impostos dentro da lei ou acredita ter pago imposto a mais e quer recuperar o valor.</p>
+                </a>
+
+                <a href="https://wa.me/5517997413122?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20uma%20orienta%C3%A7%C3%A3o." target="_blank" rel="noopener noreferrer" class="area-card group flex flex-col justify-center rounded-2xl border border-gold-600/60 bg-gold-500/10 p-6 hover:border-gold-400 hover:bg-gold-500/15 hover:shadow-xl hover:shadow-gold-500/10">
+                    <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-gold-500 text-black">
+                        <i class="fa-brands fa-whatsapp text-2xl" aria-hidden="true"></i>
+                    </div>
+                    <h3 class="mt-4 text-lg font-semibold text-white">Não sabe qual é a sua área?</h3>
+                    <p class="mt-2 flex-1 text-zinc-300">Conte o seu caso pelo WhatsApp para saber qual área se aplica a ele.</p>
+                    <span class="mt-4 text-sm font-semibold text-gold-400 group-hover:text-gold-200">Falar no WhatsApp</span>
+                </a>
+
             </div>
         </div>
     </section>
- 
+
     <!-- ================= LOCALIZAÇÃO ================= -->
-    <section id="localizacao" class="border-b border-yellow-900/30 bg-black py-20 sm:py-24">
+    <section id="localizacao" class="border-b border-gold-900/30 bg-black py-20 sm:py-24">
         <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
- 
+
             <div class="mx-auto max-w-2xl text-center">
                 <h2 class="text-3xl font-bold tracking-tight text-white sm:text-4xl">
                     Nossa <span class="gold-text">Localização</span>
                 </h2>
                 <div class="gold-divider mx-auto mt-4 max-w-xs"></div>
-                <p class="mt-4 text-lg text-yellow-100/50">Venha nos visitar ou entre em contato pelo WhatsApp</p>
+                <p class="mt-4 text-lg text-zinc-400">Venha nos visitar ou entre em contato pelo WhatsApp</p>
             </div>
- 
+
             <div class="mt-12 grid gap-8 lg:grid-cols-2">
- 
+
                 <div class="flex flex-col justify-center gap-6">
- 
-                    <div class="rounded-2xl border border-yellow-900/40 bg-black p-6">
+
+                    <div class="rounded-2xl border border-gold-900/40 bg-zinc-950 p-6">
                         <div class="flex items-start gap-4">
-                            <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-yellow-500/10 text-yellow-500">
+                            <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-gold-500/10 text-gold-500">
                                 <i class="fa-solid fa-location-dot text-xl" aria-hidden="true"></i>
                             </div>
                             <div>
-                                <p class="font-semibold text-yellow-400">Endereço</p>
-                                <p class="mt-1 text-yellow-100/70">Rua Pará, 3094</p>
-                                <p class="text-yellow-100/70">Chácara Aviação — Votuporanga, SP</p>
+                                <p class="font-semibold text-gold-400">Endereço</p>
+                                <p class="mt-1 text-zinc-300">Rua Pará, 3094</p>
+                                <p class="text-zinc-300">Chácara Aviação — Votuporanga, SP</p>
                             </div>
                         </div>
                     </div>
- 
-            <div class="rounded-2xl border border-yellow-900/40 bg-black p-6">
-    <div class="flex items-start gap-4">
-        <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-yellow-500/10 text-yellow-500">
-            <i class="fa-brands fa-whatsapp text-xl" aria-hidden="true"></i>
-        </div>
-        <div>
-            <p class="font-semibold text-yellow-400">WhatsApp</p>
-            <a href="https://wa.me/5517997413122" target="_blank" rel="noopener noreferrer" class="mt-1 block text-yellow-100/70 transition hover:text-yellow-400">(17) 99741-3122 — São Paulo</a>
-        </div>
-    </div>
-</div>
 
-<div class="rounded-2xl border border-yellow-900/40 bg-black p-6">
-    <div class="flex items-start gap-4">
-        <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-yellow-500/10 text-yellow-500">
-            <i class="fa-solid fa-share-nodes text-xl" aria-hidden="true"></i>
-        </div>
-        <div>
-            <p class="font-semibold text-yellow-400">Redes Sociais</p>
-            <a href="https://www.instagram.com/dr.wesleymelo" target="_blank" rel="noopener noreferrer" class="mt-1 block text-yellow-100/70 transition hover:text-yellow-400">
-                <i class="fa-brands fa-instagram mr-2" aria-hidden="true"></i>Instagram
-            </a>
-            <a href="https://www.linkedin.com/in/wesley-melo-67465784" target="_blank" rel="noopener noreferrer" class="mt-1 block text-yellow-100/70 transition hover:text-yellow-400">
-                <i class="fa-brands fa-linkedin mr-2" aria-hidden="true"></i>LinkedIn
-            </a>
-        </div>
-    </div>
-</div>
-                <div class="overflow-hidden rounded-2xl border border-yellow-900/40 shadow-xl shadow-black/40" style="min-height: 380px;">
+                    <div class="rounded-2xl border border-gold-900/40 bg-zinc-950 p-6">
+                        <div class="flex items-start gap-4">
+                            <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-gold-500/10 text-gold-500">
+                                <i class="fa-brands fa-whatsapp text-xl" aria-hidden="true"></i>
+                            </div>
+                            <div>
+                                <p class="font-semibold text-gold-400">Telefone e WhatsApp</p>
+                                <a href="tel:+5517997413122" class="mt-1 block text-zinc-300 motion-safe:transition hover:text-gold-400">(17) 99741-3122 · WhatsApp e ligações</a>
+                                <div class="mt-3 flex flex-wrap gap-3">
+                                    <a href="https://wa.me/5517997413122?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20uma%20orienta%C3%A7%C3%A3o." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 rounded-full bg-gold-500 px-4 py-2 text-sm font-semibold text-black motion-safe:transition hover:bg-gold-400">
+                                        <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>Falar no WhatsApp
+                                    </a>
+                                    <a href="tel:+5517997413122" class="inline-flex items-center gap-2 rounded-full border border-gold-600 px-4 py-2 text-sm font-semibold text-gold-400 motion-safe:transition hover:bg-gold-950/40 hover:text-gold-200">
+                                        <i class="fa-solid fa-phone text-xs" aria-hidden="true"></i>Ligar
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="rounded-2xl border border-gold-900/40 bg-zinc-950 p-6">
+                        <div class="flex items-start gap-4">
+                            <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-gold-500/10 text-gold-500">
+                                <i class="fa-solid fa-share-nodes text-xl" aria-hidden="true"></i>
+                            </div>
+                            <div>
+                                <p class="font-semibold text-gold-400">Redes Sociais</p>
+                                <div class="mt-3 flex flex-wrap gap-3">
+                                    <a href="https://www.instagram.com/dr.wesleymelo" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 rounded-full border border-gold-900/60 px-4 py-2 text-sm text-zinc-300 motion-safe:transition hover:border-gold-600 hover:text-gold-400">
+                                        <i class="fa-brands fa-instagram" aria-hidden="true"></i>Instagram
+                                    </a>
+                                    <a href="https://www.linkedin.com/in/wesley-melo-67465784" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 rounded-full border border-gold-900/60 px-4 py-2 text-sm text-zinc-300 motion-safe:transition hover:border-gold-600 hover:text-gold-400">
+                                        <i class="fa-brands fa-linkedin" aria-hidden="true"></i>LinkedIn
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="overflow-hidden rounded-2xl border border-gold-900/40 shadow-xl shadow-black/40" style="min-height: 380px;">
                     <iframe
                         src="https://maps.google.com/maps?q=Rua+Par%C3%A1+3094+Ch%C3%A1cara+Avia%C3%A7%C3%A3o+Votuporanga+SP&output=embed"
                         width="100%"
@@ -258,33 +291,37 @@
             </div>
         </div>
     </section>
- 
+
     <!-- ================= FOOTER ================= -->
-    <footer id="footer" class="border-t border-yellow-900/30 bg-black py-12">
+    <footer id="footer" class="border-t border-gold-900/30 bg-black pb-24 pt-12 md:pb-12">
         <div class="mx-auto grid max-w-6xl gap-10 px-4 sm:px-6 md:grid-cols-3 lg:px-8">
- 
+
             <div class="md:col-span-2">
                 <p class="text-lg font-bold text-white">WOM<span class="gold-text"> Advogados</span></p>
-                <p class="mt-3 max-w-sm text-sm text-yellow-100/50">Escritório de advocacia especializado em diversas áreas do Direito, com sede em Votuporanga-SP.</p>
-                <p class="mt-2 text-sm text-yellow-100/40">Rua Pará, 3094 — Chácara Aviação, Votuporanga-SP</p>
+                <p class="mt-3 max-w-sm text-sm text-zinc-400">Escritório de advocacia especializado em diversas áreas do Direito, com sede em Votuporanga-SP.</p>
+                <p class="mt-2 text-sm text-zinc-400">Rua Pará, 3094 — Chácara Aviação, Votuporanga-SP</p>
             </div>
- 
+
             <div>
-                <p class="text-xs font-semibold uppercase tracking-wider text-yellow-600">Contatos</p>
+                <p class="text-sm font-semibold text-gold-500">Contatos</p>
                 <ul class="mt-4 space-y-2 text-sm">
-                    <li><a href="https://www.instagram.com/dr.wesleymelo" target="_blank" rel="noopener noreferrer" class="text-yellow-100/60 transition hover:text-yellow-400"><i class="fa-brands fa-instagram mr-2" aria-hidden="true"></i>Instagram</a></li>
-                    <li><a href="https://www.linkedin.com/in/wesley-melo-67465784" target="_blank" rel="noopener noreferrer" class="text-yellow-100/60 transition hover:text-yellow-400"><i class="fa-brands fa-linkedin mr-2" aria-hidden="true"></i>LinkedIn</a></li>
-                    <li><a href="https://wa.me/5517997413122" target="_blank" rel="noopener noreferrer" class="text-yellow-100/60 transition hover:text-yellow-400"><i class="fa-brands fa-whatsapp mr-2" aria-hidden="true"></i>WhatsApp — São Paulo</a></li>
+                    <li><a href="tel:+5517997413122" class="text-zinc-300 motion-safe:transition hover:text-gold-400"><i class="fa-solid fa-phone mr-2" aria-hidden="true"></i>(17) 99741-3122 · WhatsApp e ligações</a></li>
+                    <li><a href="https://wa.me/5517997413122?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20uma%20orienta%C3%A7%C3%A3o." target="_blank" rel="noopener noreferrer" class="text-zinc-300 motion-safe:transition hover:text-gold-400"><i class="fa-brands fa-whatsapp mr-2" aria-hidden="true"></i>Falar no WhatsApp</a></li>
+                    <li><a href="https://www.instagram.com/dr.wesleymelo" target="_blank" rel="noopener noreferrer" class="text-zinc-300 motion-safe:transition hover:text-gold-400"><i class="fa-brands fa-instagram mr-2" aria-hidden="true"></i>Instagram</a></li>
+                    <li><a href="https://www.linkedin.com/in/wesley-melo-67465784" target="_blank" rel="noopener noreferrer" class="text-zinc-300 motion-safe:transition hover:text-gold-400"><i class="fa-brands fa-linkedin mr-2" aria-hidden="true"></i>LinkedIn</a></li>
+                </ul>
             </div>
- 
+
         </div>
- 
+
         <div class="gold-divider mx-auto mt-10 max-w-6xl px-4 sm:px-6 lg:px-8"></div>
- 
-        <p class="mx-auto mt-6 max-w-6xl px-4 text-center text-xs text-yellow-900 sm:px-6 lg:px-8">
+
+        <p class="mx-auto mt-6 max-w-6xl px-4 text-center text-xs text-zinc-400 sm:px-6 lg:px-8">
             © <span id="ano"></span> Wesley de Oliveira Melo — Todos os direitos reservados.
+            <span class="mx-1" aria-hidden="true">|</span>
+            <a href="politica-de-privacidade.html" class="underline underline-offset-4 motion-safe:transition hover:text-gold-400">Política de Privacidade</a>
         </p>
     </footer>
- 
+
 </body>
 </html>

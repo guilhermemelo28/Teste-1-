@@ -1,23 +1,18 @@
 // ===== CONFIGURAÇÃO DO TAILWIND =====
+// Uma única escala de dourado, no tom do site antigo e do favicon (#FBBF24).
+// Os tons 200-600 também estão em style.css (:root).
 tailwind.config = {
     theme: {
         extend: {
             colors: {
-                brand: {
-                    300: "#fde68a",
-                    400: "#fbbf24",
-                    500: "#d97706",
-                    600: "#b45309",
-                    700: "#92400e",
-                },
                 gold: {
-                    100: "#fef3c7",
-                    200: "#fde68a",
-                    300: "#fcd34d",
-                    400: "#fbbf24",
-                    500: "#f59e0b",
-                    600: "#d97706",
-                    700: "#b45309",
+                    200: "#FDE68A", // brilho: hover, linha do nome
+                    400: "#FBBF24", // links, foco, hover do botão
+                    500: "#EAB308", // principal: botão, ícones, rótulos
+                    600: "#CA8A04", // contornos
+                    800: "#854D0E", // bordas
+                    900: "#713F12", // bordas e divisórias suaves
+                    950: "#422006", // fundos de hover
                 },
             },
             fontFamily: {
@@ -26,12 +21,13 @@ tailwind.config = {
         },
     },
 };
- 
+
 // ===== FECHAR MENU MOBILE AO CLICAR EM UM LINK =====
 document.addEventListener("DOMContentLoaded", function () {
-    const details = document.querySelector("details");
-    const mobileLinks = document.querySelectorAll("details nav a");
- 
+    const details = document.getElementById("menu-mobile");
+    if (!details) return;
+    const mobileLinks = details.querySelectorAll("nav a");
+
     mobileLinks.forEach(function (link) {
         link.addEventListener("click", function () {
             details.removeAttribute("open");
@@ -43,39 +39,16 @@ document.addEventListener("DOMContentLoaded", function () {
 document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("ano").textContent = new Date().getFullYear();
 });
+
 // ===== BOTÃO FLUTUANTE WHATSAPP ===== //
+// Estilos, hover e foco ficam em style.css (.wa-flutuante).
 document.addEventListener("DOMContentLoaded", function () {
     const btn = document.createElement("a");
-    btn.href = "https://wa.me/5517997413122";
+    btn.href = "https://wa.me/5517997413122?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20uma%20orienta%C3%A7%C3%A3o.";
     btn.target = "_blank";
     btn.rel = "noopener noreferrer";
+    btn.className = "wa-flutuante";
     btn.setAttribute("aria-label", "Falar no WhatsApp");
-    btn.innerHTML = '<i class="fa-brands fa-whatsapp"></i>';
-    btn.style.cssText = `
-        position: fixed;
-        bottom: 28px;
-        right: 28px;
-        z-index: 9999;
-        background: #25d366;
-        color: white;
-        width: 60px;
-        height: 60px;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 28px;
-        box-shadow: 0 4px 20px rgba(37,211,102,0.4);
-        transition: transform 0.2s, box-shadow 0.2s;
-        text-decoration: none;
-    `;
-    btn.addEventListener("mouseenter", () => {
-        btn.style.transform = "scale(1.1)";
-        btn.style.boxShadow = "0 6px 28px rgba(37,211,102,0.6)";
-    });
-    btn.addEventListener("mouseleave", () => {
-        btn.style.transform = "scale(1)";
-        btn.style.boxShadow = "0 4px 20px rgba(37,211,102,0.4)";
-    });
+    btn.innerHTML = '<i class="fa-brands fa-whatsapp" aria-hidden="true"></i>';
     document.body.appendChild(btn);
 });
