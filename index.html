@@ -48,18 +48,19 @@
 <body class="min-h-screen bg-black font-sans text-zinc-300 antialiased">
 
     <!-- ================= HEADER ================= -->
-    <header class="sticky top-0 z-50 border-b border-gold-900/40 bg-black/90 backdrop-blur-xl">
+    <header class="site-header">
         <div class="mx-auto flex max-w-6xl items-center justify-between px-4 py-2 sm:px-6 lg:px-8">
 
             <a href="#" class="flex items-center" aria-label="WOM - Wesley Melo Advogados Associados, voltar ao início">
-                <img src="assets/imagens/logo.png" alt="Logo WOM - Wesley Melo Advogados Associados" width="250" height="100" class="h-16 w-auto motion-safe:transition motion-safe:hover:scale-105 md:h-24" />
+                <img src="assets/imagens/logo.png" alt="Logo WOM - Wesley Melo Advogados Associados" width="250" height="100" class="site-logo motion-safe:hover:scale-105" />
             </a>
 
             <nav class="hidden items-center gap-8 md:flex" aria-label="Principal">
-                <a href="#sobre" class="text-sm font-medium text-zinc-300 motion-safe:transition hover:text-gold-400">Sobre Nós</a>
-                <a href="#features" class="text-sm font-medium text-zinc-300 motion-safe:transition hover:text-gold-400">Serviços</a>
-                <a href="#localizacao" class="text-sm font-medium text-zinc-300 motion-safe:transition hover:text-gold-400">Localização</a>
-                <a href="#footer" class="text-sm font-medium text-zinc-300 motion-safe:transition hover:text-gold-400">Contato</a>
+                <a href="#sobre" class="link-sublinhado text-sm font-medium text-zinc-300 hover:text-gold-400">Sobre Nós</a>
+                <a href="#features" class="link-sublinhado text-sm font-medium text-zinc-300 hover:text-gold-400">Serviços</a>
+                <a href="#publicacoes" class="link-sublinhado text-sm font-medium text-zinc-300 hover:text-gold-400">Publicações</a>
+                <a href="#localizacao" class="link-sublinhado text-sm font-medium text-zinc-300 hover:text-gold-400">Localização</a>
+                <a href="#footer" class="link-sublinhado text-sm font-medium text-zinc-300 hover:text-gold-400">Contato</a>
             </nav>
 
             <details id="menu-mobile" class="relative md:hidden">
@@ -69,15 +70,17 @@
                 <nav class="absolute right-0 top-12 z-50 flex min-w-[220px] flex-col overflow-hidden rounded-2xl border border-gold-900/40 bg-black shadow-2xl shadow-black/50" aria-label="Principal Mobile">
                     <a href="#sobre" class="px-5 py-3 text-sm font-medium text-zinc-300 motion-safe:transition hover:bg-gold-950/30 hover:text-gold-400">Sobre Nós</a>
                     <a href="#features" class="px-5 py-3 text-sm font-medium text-zinc-300 motion-safe:transition hover:bg-gold-950/30 hover:text-gold-400">Serviços</a>
+                    <a href="#publicacoes" class="px-5 py-3 text-sm font-medium text-zinc-300 motion-safe:transition hover:bg-gold-950/30 hover:text-gold-400">Publicações</a>
                     <a href="#localizacao" class="px-5 py-3 text-sm font-medium text-zinc-300 motion-safe:transition hover:bg-gold-950/30 hover:text-gold-400">Localização</a>
                     <a href="#footer" class="px-5 py-3 text-sm font-medium text-zinc-300 motion-safe:transition hover:bg-gold-950/30 hover:text-gold-400">Contato</a>
                 </nav>
             </details>
         </div>
+        <div class="leitura" aria-hidden="true"><span></span></div>
     </header>
 
     <!-- ================= SOBRE NÓS (ABERTURA) ================= -->
-    <section id="sobre" class="relative overflow-hidden border-b border-gold-900/30 bg-black py-14 sm:py-24">
+    <section id="sobre" class="hero-offset relative overflow-hidden border-b border-gold-900/30 bg-black pb-14 sm:pb-24">
 
         <div class="pointer-events-none absolute inset-0 overflow-hidden" aria-hidden="true">
             <div class="absolute -left-32 top-0 h-96 w-96 rounded-full bg-gold-600/5 blur-3xl"></div>
@@ -88,21 +91,21 @@
             <div class="grid items-center gap-12 lg:min-h-[70vh] lg:grid-cols-2 lg:gap-16">
 
                 <div>
-                    <p class="text-sm font-semibold uppercase tracking-[0.3em] text-gold-500">Sobre Nós</p>
+                    <p data-reveal="inicio" class="text-sm font-semibold uppercase tracking-[0.3em] text-gold-500">Sobre Nós</p>
 
-                    <h1 class="mt-6 text-4xl font-extrabold leading-tight tracking-tight text-white sm:text-5xl lg:text-6xl">
+                    <h1 data-reveal="inicio" class="mt-6 text-4xl font-extrabold leading-tight tracking-tight text-white sm:text-5xl lg:text-6xl">
                         Mais de <span class="gold-text">8 anos</span> de experiência na área jurídica
                     </h1>
 
-                    <p class="mt-4 text-xl font-semibold text-gold-200">Dr. Wesley de Oliveira Melo, advogado em Votuporanga-SP</p>
+                    <p data-reveal="inicio" class="mt-4 text-xl font-semibold text-gold-200">Dr. Wesley de Oliveira Melo, advogado em Votuporanga-SP</p>
 
-                    <div class="gold-divider my-6 max-w-xs"></div>
+                    <div data-reveal="inicio" class="gold-divider my-6 max-w-xs"></div>
 
-                    <p class="max-w-xl text-lg leading-relaxed text-zinc-300">
+                    <p data-reveal="inicio" class="max-w-xl text-lg leading-relaxed text-zinc-300">
                         O escritório WOM - Wesley Melo Advogados Associados nasceu da visão do Dr. Wesley de Oliveira Melo de oferecer atendimento jurídico personalizado. Fundado com base nos princípios de ética, transparência e dedicação, o escritório atua em diversas áreas do Direito: civil, trabalhista, criminal, tributário, empresarial, inventários e crimes cibernéticos.
                     </p>
 
-                    <div class="mt-10 flex flex-wrap gap-4">
+                    <div data-reveal="inicio" class="mt-10 flex flex-wrap gap-4">
                         <a href="https://wa.me/5517997413122?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20uma%20orienta%C3%A7%C3%A3o." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 rounded-full border border-gold-600 bg-gold-500 px-8 py-4 font-semibold text-black shadow-lg shadow-gold-500/20 motion-safe:transition motion-safe:duration-200 hover:bg-gold-400 hover:shadow-gold-400/40">
                             <i class="fa-brands fa-whatsapp text-lg" aria-hidden="true"></i>
                             Falar no WhatsApp
@@ -114,8 +117,8 @@
                     </div>
                 </div>
 
-                <div class="relative mx-auto w-full max-w-md overflow-hidden rounded-3xl border border-gold-800/30 shadow-2xl shadow-black/60 lg:max-w-none">
-                    <img src="assets/imagens/fotopai.jpg" alt="Dr. Wesley de Oliveira Melo" width="400" height="400" class="aspect-square h-full w-full object-cover" />
+                <div data-reveal="inicio" class="relative mx-auto w-full max-w-md overflow-hidden rounded-3xl border border-gold-800/30 shadow-2xl shadow-black/60 lg:max-w-none">
+                    <img data-parallax src="assets/imagens/fotopai.jpg" alt="Dr. Wesley de Oliveira Melo" width="400" height="400" class="aspect-square h-full w-full object-cover" />
                     <div class="pointer-events-none absolute inset-0 rounded-3xl" style="box-shadow: inset 0 0 60px rgba(202,138,4,0.15);" aria-hidden="true"></div>
                 </div>
             </div>
@@ -127,17 +130,17 @@
         <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
 
             <div class="mx-auto max-w-2xl text-center">
-                <h2 class="text-3xl font-bold tracking-tight text-white sm:text-4xl">
+                <h2 data-reveal class="text-3xl font-bold tracking-tight text-white sm:text-4xl">
                     Nossos <span class="gold-text">serviços</span> ofertados
                 </h2>
-                <div class="gold-divider mx-auto mt-4 max-w-xs"></div>
-                <p class="mt-4 text-lg text-zinc-400">Áreas de atuação do escritório WOM - Wesley Melo Advogados Associados. Toque na área do seu caso para conversar pelo WhatsApp.</p>
+                <div data-reveal class="gold-divider mx-auto mt-4 max-w-xs"></div>
+                <p data-reveal class="mt-4 text-lg text-zinc-400">Áreas de atuação do escritório WOM - Wesley Melo Advogados Associados. Toque na área do seu caso para conversar pelo WhatsApp.</p>
             </div>
 
             <!-- 7 áreas + 1 card de dúvida = 8 cards: fecha 2 colunas (tablet) e 4 colunas (desktop) sem card órfão -->
             <div class="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
 
-                <a href="https://wa.me/5517997413122?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20uma%20orienta%C3%A7%C3%A3o%20sobre%20Direito%20Civil." target="_blank" rel="noopener noreferrer" class="area-card group flex flex-col rounded-2xl border border-gold-900/40 bg-zinc-950 p-6 hover:border-gold-600/50 hover:shadow-xl hover:shadow-gold-500/5">
+                <a data-reveal href="https://wa.me/5517997413122?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20uma%20orienta%C3%A7%C3%A3o%20sobre%20Direito%20Civil." target="_blank" rel="noopener noreferrer" class="area-card group flex flex-col rounded-2xl border border-gold-900/40 bg-zinc-950 p-6 hover:border-gold-600/50 hover:shadow-xl hover:shadow-gold-500/5">
                     <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-gold-500/10 text-gold-500">
                         <i class="fa-solid fa-scale-balanced text-xl" aria-hidden="true"></i>
                     </div>
@@ -145,7 +148,7 @@
                     <p class="mt-2 flex-1 text-zinc-400">Quando você sofreu um prejuízo e quer ser indenizado, tem um contrato que não foi cumprido, um problema com imóvel ou uma questão de família ou de herança.</p>
                 </a>
 
-                <a href="https://wa.me/5517997413122?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20uma%20orienta%C3%A7%C3%A3o%20sobre%20Direito%20Trabalhista." target="_blank" rel="noopener noreferrer" class="area-card group flex flex-col rounded-2xl border border-gold-900/40 bg-zinc-950 p-6 hover:border-gold-600/50 hover:shadow-xl hover:shadow-gold-500/5">
+                <a data-reveal href="https://wa.me/5517997413122?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20uma%20orienta%C3%A7%C3%A3o%20sobre%20Direito%20Trabalhista." target="_blank" rel="noopener noreferrer" class="area-card group flex flex-col rounded-2xl border border-gold-900/40 bg-zinc-950 p-6 hover:border-gold-600/50 hover:shadow-xl hover:shadow-gold-500/5">
                     <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-gold-500/10 text-gold-500">
                         <i class="fa-solid fa-helmet-safety text-xl" aria-hidden="true"></i>
                     </div>
@@ -153,7 +156,7 @@
                     <p class="mt-2 flex-1 text-zinc-400">Para o trabalhador com um problema no emprego e para a empresa que quer evitar processos ou precisa se defender em uma reclamação trabalhista.</p>
                 </a>
 
-                <a href="https://wa.me/5517997413122?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20uma%20orienta%C3%A7%C3%A3o%20sobre%20Direito%20Criminal." target="_blank" rel="noopener noreferrer" class="area-card group flex flex-col rounded-2xl border border-gold-900/40 bg-zinc-950 p-6 hover:border-gold-600/50 hover:shadow-xl hover:shadow-gold-500/5">
+                <a data-reveal href="https://wa.me/5517997413122?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20uma%20orienta%C3%A7%C3%A3o%20sobre%20Direito%20Criminal." target="_blank" rel="noopener noreferrer" class="area-card group flex flex-col rounded-2xl border border-gold-900/40 bg-zinc-950 p-6 hover:border-gold-600/50 hover:shadow-xl hover:shadow-gold-500/5">
                     <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-gold-500/10 text-gold-500">
                         <i class="fa-solid fa-shield-halved text-xl" aria-hidden="true"></i>
                     </div>
@@ -161,7 +164,7 @@
                     <p class="mt-2 flex-1 text-zinc-400">Quando você ou alguém próximo está sendo investigado ou processado. Defesa em todas as fases do processo, em casos como crimes contra o patrimônio, crimes econômicos, tráfico e homicídio.</p>
                 </a>
 
-                <a href="https://wa.me/5517997413122?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20uma%20orienta%C3%A7%C3%A3o%20sobre%20crimes%20cibern%C3%A9ticos." target="_blank" rel="noopener noreferrer" class="area-card group flex flex-col rounded-2xl border border-gold-900/40 bg-zinc-950 p-6 hover:border-gold-600/50 hover:shadow-xl hover:shadow-gold-500/5">
+                <a data-reveal href="https://wa.me/5517997413122?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20uma%20orienta%C3%A7%C3%A3o%20sobre%20crimes%20cibern%C3%A9ticos." target="_blank" rel="noopener noreferrer" class="area-card group flex flex-col rounded-2xl border border-gold-900/40 bg-zinc-950 p-6 hover:border-gold-600/50 hover:shadow-xl hover:shadow-gold-500/5">
                     <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-gold-500/10 text-gold-500">
                         <i class="fa-solid fa-laptop-code text-xl" aria-hidden="true"></i>
                     </div>
@@ -169,7 +172,7 @@
                     <p class="mt-2 flex-1 text-zinc-400">Quando o caso envolve internet: fraude eletrônica, invasão de sistemas, estelionato digital ou violação de dados. Inclui a análise pericial das provas digitais.</p>
                 </a>
 
-                <a href="https://wa.me/5517997413122?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20uma%20orienta%C3%A7%C3%A3o%20sobre%20invent%C3%A1rio." target="_blank" rel="noopener noreferrer" class="area-card group flex flex-col rounded-2xl border border-gold-900/40 bg-zinc-950 p-6 hover:border-gold-600/50 hover:shadow-xl hover:shadow-gold-500/5">
+                <a data-reveal href="https://wa.me/5517997413122?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20uma%20orienta%C3%A7%C3%A3o%20sobre%20invent%C3%A1rio." target="_blank" rel="noopener noreferrer" class="area-card group flex flex-col rounded-2xl border border-gold-900/40 bg-zinc-950 p-6 hover:border-gold-600/50 hover:shadow-xl hover:shadow-gold-500/5">
                     <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-gold-500/10 text-gold-500">
                         <i class="fa-solid fa-scroll text-xl" aria-hidden="true"></i>
                     </div>
@@ -177,7 +180,7 @@
                     <p class="mt-2 flex-1 text-zinc-400">Quando alguém da família faleceu e é preciso fazer o inventário e a partilha dos bens, em cartório ou na Justiça. Também para quem quer planejar em vida como o patrimônio vai passar aos herdeiros.</p>
                 </a>
 
-                <a href="https://wa.me/5517997413122?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20uma%20orienta%C3%A7%C3%A3o%20sobre%20Direito%20Empresarial." target="_blank" rel="noopener noreferrer" class="area-card group flex flex-col rounded-2xl border border-gold-900/40 bg-zinc-950 p-6 hover:border-gold-600/50 hover:shadow-xl hover:shadow-gold-500/5">
+                <a data-reveal href="https://wa.me/5517997413122?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20uma%20orienta%C3%A7%C3%A3o%20sobre%20Direito%20Empresarial." target="_blank" rel="noopener noreferrer" class="area-card group flex flex-col rounded-2xl border border-gold-900/40 bg-zinc-950 p-6 hover:border-gold-600/50 hover:shadow-xl hover:shadow-gold-500/5">
                     <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-gold-500/10 text-gold-500">
                         <i class="fa-solid fa-briefcase text-xl" aria-hidden="true"></i>
                     </div>
@@ -185,7 +188,7 @@
                     <p class="mt-2 flex-1 text-zinc-400">Para quem tem empresa e precisa de contratos comerciais, organizar a sociedade entre os sócios, comprar, vender ou unir empresas, ou deixar o negócio em dia com as regras (compliance).</p>
                 </a>
 
-                <a href="https://wa.me/5517997413122?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20uma%20orienta%C3%A7%C3%A3o%20sobre%20Direito%20Tribut%C3%A1rio." target="_blank" rel="noopener noreferrer" class="area-card group flex flex-col rounded-2xl border border-gold-900/40 bg-zinc-950 p-6 hover:border-gold-600/50 hover:shadow-xl hover:shadow-gold-500/5">
+                <a data-reveal href="https://wa.me/5517997413122?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20uma%20orienta%C3%A7%C3%A3o%20sobre%20Direito%20Tribut%C3%A1rio." target="_blank" rel="noopener noreferrer" class="area-card group flex flex-col rounded-2xl border border-gold-900/40 bg-zinc-950 p-6 hover:border-gold-600/50 hover:shadow-xl hover:shadow-gold-500/5">
                     <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-gold-500/10 text-gold-500">
                         <i class="fa-solid fa-file-invoice-dollar text-xl" aria-hidden="true"></i>
                     </div>
@@ -193,7 +196,7 @@
                     <p class="mt-2 flex-1 text-zinc-400">Quando você ou sua empresa recebeu uma cobrança ou autuação do fisco, quer pagar menos impostos dentro da lei ou acredita ter pago imposto a mais e quer recuperar o valor.</p>
                 </a>
 
-                <a href="https://wa.me/5517997413122?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20uma%20orienta%C3%A7%C3%A3o." target="_blank" rel="noopener noreferrer" class="area-card group flex flex-col justify-center rounded-2xl border border-gold-600/60 bg-gold-500/10 p-6 hover:border-gold-400 hover:bg-gold-500/15 hover:shadow-xl hover:shadow-gold-500/10">
+                <a data-reveal href="https://wa.me/5517997413122?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20uma%20orienta%C3%A7%C3%A3o." target="_blank" rel="noopener noreferrer" class="area-card group flex flex-col justify-center rounded-2xl border border-gold-600/60 bg-gold-500/10 p-6 hover:border-gold-400 hover:bg-gold-500/15 hover:shadow-xl hover:shadow-gold-500/10">
                     <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-gold-500 text-black">
                         <i class="fa-brands fa-whatsapp text-2xl" aria-hidden="true"></i>
                     </div>
@@ -206,23 +209,58 @@
         </div>
     </section>
 
+    <!-- ================= PUBLICAÇÕES (Instagram, via publicacoes.js) ================= -->
+    <section id="publicacoes" class="border-b border-gold-900/30 bg-black py-20 sm:py-24">
+        <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+
+            <div class="mx-auto max-w-2xl text-center">
+                <h2 data-reveal class="text-3xl font-bold tracking-tight text-white sm:text-4xl">
+                    Nossas <span class="gold-text">publicações</span>
+                </h2>
+                <div data-reveal class="gold-divider mx-auto mt-4 max-w-xs"></div>
+                <p data-reveal class="mt-4 text-lg text-zinc-400">Conteúdos do Dr. Wesley de Oliveira Melo sobre Direito, publicados no Instagram @dr.wesleymelo. Toque em uma publicação para abrir no Instagram.</p>
+            </div>
+
+            <!-- Sem JS, sem feed configurado ou com erro no feed, fica o convite abaixo -->
+            <div class="mt-14" data-publicacoes data-quantidade="6">
+                <div data-pub-aviso data-reveal class="flex flex-col items-start gap-6 rounded-2xl border border-gold-600/60 bg-gold-500/10 p-6 sm:p-8 md:flex-row md:items-center">
+                    <div class="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-gold-500 text-black">
+                        <i class="fa-brands fa-instagram text-3xl" aria-hidden="true"></i>
+                    </div>
+                    <div class="flex-1">
+                        <p class="text-xl font-semibold text-white">Acompanhe as publicações no Instagram</p>
+                        <p class="mt-2 max-w-xl text-zinc-300">O Dr. Wesley de Oliveira Melo publica conteúdos sobre Direito e novidades do escritório no perfil @dr.wesleymelo.</p>
+                    </div>
+                    <a href="https://www.instagram.com/dr.wesleymelo/" target="_blank" rel="noopener noreferrer" class="inline-flex shrink-0 items-center gap-2 rounded-full border border-gold-600 bg-gold-500 px-6 py-3 font-semibold text-black motion-safe:transition hover:bg-gold-400">
+                        <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+                        Abrir o Instagram
+                    </a>
+                </div>
+            </div>
+
+            <p class="mt-12 text-center" data-pub-com-feed>
+                <a href="publicacoes.html" class="link-sublinhado font-semibold text-gold-400 hover:text-gold-200">Ver todas as publicações</a>
+            </p>
+        </div>
+    </section>
+
     <!-- ================= LOCALIZAÇÃO ================= -->
     <section id="localizacao" class="border-b border-gold-900/30 bg-black py-20 sm:py-24">
         <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
 
             <div class="mx-auto max-w-2xl text-center">
-                <h2 class="text-3xl font-bold tracking-tight text-white sm:text-4xl">
+                <h2 data-reveal class="text-3xl font-bold tracking-tight text-white sm:text-4xl">
                     Nossa <span class="gold-text">Localização</span>
                 </h2>
-                <div class="gold-divider mx-auto mt-4 max-w-xs"></div>
-                <p class="mt-4 text-lg text-zinc-400">Venha nos visitar ou entre em contato pelo WhatsApp</p>
+                <div data-reveal class="gold-divider mx-auto mt-4 max-w-xs"></div>
+                <p data-reveal class="mt-4 text-lg text-zinc-400">Venha nos visitar ou entre em contato pelo WhatsApp</p>
             </div>
 
             <div class="mt-12 grid gap-8 lg:grid-cols-2">
 
                 <div class="flex flex-col justify-center gap-6">
 
-                    <div class="rounded-2xl border border-gold-900/40 bg-zinc-950 p-6">
+                    <div data-reveal class="rounded-2xl border border-gold-900/40 bg-zinc-950 p-6">
                         <div class="flex items-start gap-4">
                             <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-gold-500/10 text-gold-500">
                                 <i class="fa-solid fa-location-dot text-xl" aria-hidden="true"></i>
@@ -235,7 +273,7 @@
                         </div>
                     </div>
 
-                    <div class="rounded-2xl border border-gold-900/40 bg-zinc-950 p-6">
+                    <div data-reveal class="rounded-2xl border border-gold-900/40 bg-zinc-950 p-6">
                         <div class="flex items-start gap-4">
                             <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-gold-500/10 text-gold-500">
                                 <i class="fa-brands fa-whatsapp text-xl" aria-hidden="true"></i>
@@ -255,7 +293,7 @@
                         </div>
                     </div>
 
-                    <div class="rounded-2xl border border-gold-900/40 bg-zinc-950 p-6">
+                    <div data-reveal class="rounded-2xl border border-gold-900/40 bg-zinc-950 p-6">
                         <div class="flex items-start gap-4">
                             <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-gold-500/10 text-gold-500">
                                 <i class="fa-solid fa-share-nodes text-xl" aria-hidden="true"></i>
@@ -276,7 +314,7 @@
 
                 </div>
 
-                <div class="overflow-hidden rounded-2xl border border-gold-900/40 shadow-xl shadow-black/40" style="min-height: 380px;">
+                <div data-reveal class="overflow-hidden rounded-2xl border border-gold-900/40 shadow-xl shadow-black/40" style="min-height: 380px;">
                     <iframe
                         src="https://maps.google.com/maps?q=Rua+Par%C3%A1+3094+Ch%C3%A1cara+Avia%C3%A7%C3%A3o+Votuporanga+SP&output=embed"
                         width="100%"
@@ -305,10 +343,10 @@
             <div>
                 <p class="text-sm font-semibold text-gold-500">Contatos</p>
                 <ul class="mt-4 space-y-2 text-sm">
-                    <li><a href="tel:+5517997413122" class="text-zinc-300 motion-safe:transition hover:text-gold-400"><i class="fa-solid fa-phone mr-2" aria-hidden="true"></i>(17) 99741-3122 · WhatsApp e ligações</a></li>
-                    <li><a href="https://wa.me/5517997413122?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20uma%20orienta%C3%A7%C3%A3o." target="_blank" rel="noopener noreferrer" class="text-zinc-300 motion-safe:transition hover:text-gold-400"><i class="fa-brands fa-whatsapp mr-2" aria-hidden="true"></i>Falar no WhatsApp</a></li>
-                    <li><a href="https://www.instagram.com/dr.wesleymelo" target="_blank" rel="noopener noreferrer" class="text-zinc-300 motion-safe:transition hover:text-gold-400"><i class="fa-brands fa-instagram mr-2" aria-hidden="true"></i>Instagram</a></li>
-                    <li><a href="https://www.linkedin.com/in/wesley-melo-67465784" target="_blank" rel="noopener noreferrer" class="text-zinc-300 motion-safe:transition hover:text-gold-400"><i class="fa-brands fa-linkedin mr-2" aria-hidden="true"></i>LinkedIn</a></li>
+                    <li><a href="tel:+5517997413122" class="link-sublinhado text-zinc-300 hover:text-gold-400"><i class="fa-solid fa-phone mr-2" aria-hidden="true"></i>(17) 99741-3122 · WhatsApp e ligações</a></li>
+                    <li><a href="https://wa.me/5517997413122?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20uma%20orienta%C3%A7%C3%A3o." target="_blank" rel="noopener noreferrer" class="link-sublinhado text-zinc-300 hover:text-gold-400"><i class="fa-brands fa-whatsapp mr-2" aria-hidden="true"></i>Falar no WhatsApp</a></li>
+                    <li><a href="https://www.instagram.com/dr.wesleymelo" target="_blank" rel="noopener noreferrer" class="link-sublinhado text-zinc-300 hover:text-gold-400"><i class="fa-brands fa-instagram mr-2" aria-hidden="true"></i>Instagram</a></li>
+                    <li><a href="https://www.linkedin.com/in/wesley-melo-67465784" target="_blank" rel="noopener noreferrer" class="link-sublinhado text-zinc-300 hover:text-gold-400"><i class="fa-brands fa-linkedin mr-2" aria-hidden="true"></i>LinkedIn</a></li>
                 </ul>
             </div>
 
@@ -323,5 +361,6 @@
         </p>
     </footer>
 
+    <script src="publicacoes.js" defer></script>
 </body>
 </html>

@@ -7,6 +7,36 @@
     --ouro-500: #EAB308;
     --ouro-600: #CA8A04;
     --whatsapp: #25D366;
+
+    /* Cabeçalho expandido: logo 64px + 16px de respiro + 1px de borda (md: 96 + 16 + 1) */
+    --header-h: 81px;
+    /* Curva única de todo o movimento do site: sai rápido, assenta devagar */
+    --curva: cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+@media (min-width: 768px) {
+    :root {
+        --header-h: 113px;
+    }
+}
+
+/* O atributo hidden sempre esconde, mesmo com classes de display do Tailwind */
+[hidden] {
+    display: none !important;
+}
+
+/* Texto só para leitores de tela (igual ao do Tailwind; aqui porque publicacoes.js
+   cria esses elementos depois que a página carrega) */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
 }
 
 /* ===== EFEITO DOURADO METÁLICO ===== */
@@ -36,19 +66,139 @@
     }
 }
 
-/* ===== ÂNCORAS: COMPENSA O CABEÇALHO FIXO =====
-   Mobile: logo h-16 (64px) + py-2 (16px) + borda = ~81px
-   md+:    logo h-24 (96px) + py-2 (16px) + borda = ~113px
-   (logo.png tem 250x100: em h-24 fica quase no tamanho real, nítido) */
+/* ===== CABEÇALHO FIXO QUE ENCOLHE =====
+   Fixo (fora do fluxo): encolher não empurra o conteúdo, então não há salto de layout.
+   Sem JS ele fica sempre sólido. Com JS, é transparente no topo e ganha fundo,
+   borda e sombra ao rolar (classe .is-condensed, posta por script.js). */
+.site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 50;
+    background-color: rgba(0, 0, 0, 0.9);
+    border-bottom: 1px solid rgba(113, 63, 18, 0.4);
+    -webkit-backdrop-filter: blur(24px);
+    backdrop-filter: blur(24px);
+}
+
+.site-header.is-condensed {
+    box-shadow: 0 12px 32px -16px rgba(0, 0, 0, 0.9);
+}
+
+.js .site-header:not(.is-condensed) {
+    background-color: transparent;
+    border-bottom-color: transparent;
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+}
+
+/* logo.png tem 250x100: em 96px de altura fica quase no tamanho real, nítido */
+.site-header .site-logo {
+    width: auto;
+    height: 4rem;
+}
+
+.site-header.is-condensed .site-logo {
+    height: 3rem;
+}
+
+@media (min-width: 768px) {
+    .site-header .site-logo {
+        height: 6rem;
+    }
+
+    .site-header.is-condensed .site-logo {
+        height: 4rem;
+    }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .site-header {
+        transition: background-color 0.35s, border-color 0.35s, box-shadow 0.35s;
+    }
+
+    .site-header .site-logo {
+        transition: height 0.35s var(--curva), transform 0.2s;
+    }
+}
+
+/* Barra de leitura: a linha dourada na base do cabeçalho enche conforme a rolagem */
+.leitura {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -1px;
+    height: 2px;
+    pointer-events: none;
+}
+
+.leitura span {
+    display: block;
+    height: 100%;
+    background: linear-gradient(90deg, var(--ouro-600), var(--ouro-400) 70%, var(--ouro-200));
+    transform: scaleX(0);
+    transform-origin: left center;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .leitura {
+        display: none;
+    }
+}
+
+/* Espaço para o cabeçalho fixo no início de cada página */
+.hero-offset {
+    padding-top: calc(var(--header-h) + 3.5rem);
+}
+
+.header-offset {
+    padding-top: calc(var(--header-h) + 3rem);
+}
+
+@media (min-width: 640px) {
+    .hero-offset {
+        padding-top: calc(var(--header-h) + 6rem);
+    }
+
+    .header-offset {
+        padding-top: calc(var(--header-h) + 4.5rem);
+    }
+}
+
+/* ===== ÂNCORAS: COMPENSA O CABEÇALHO JÁ ENCOLHIDO =====
+   Ao navegar por âncora a página já rolou, então vale a altura condensada:
+   mobile 48 + 16 + 1 = 65px; md+ 64 + 16 + 1 = 81px. */
 section[id],
 footer[id] {
-    scroll-margin-top: 5.5rem;
+    scroll-margin-top: 4.25rem;
 }
 
 @media (min-width: 768px) {
     section[id],
     footer[id] {
-        scroll-margin-top: 7.5rem;
+        scroll-margin-top: 5.25rem;
+    }
+}
+
+/* ===== LINKS COM SUBLINHADO QUE SE TRAÇA ===== */
+a.link-sublinhado {
+    padding-bottom: 2px;
+    background-image: linear-gradient(currentColor, currentColor);
+    background-repeat: no-repeat;
+    background-position: 0 100%;
+    background-size: 0% 1px;
+}
+
+a.link-sublinhado:hover,
+a.link-sublinhado:focus-visible,
+a.link-sublinhado[aria-current="page"] {
+    background-size: 100% 1px;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    a.link-sublinhado {
+        transition: background-size 0.35s var(--curva), color 0.2s;
     }
 }
 
@@ -61,6 +211,195 @@ footer[id] {
     .area-card:hover,
     .area-card:focus-visible {
         transform: translateY(-4px);
+    }
+}
+
+/* ===== ENTRADA DOS BLOCOS (esquerda -> direita) =====
+   Só esconde com .revela no <html> (posto por script.js) e sem "menos movimento".
+   Depois da entrada, script.js remove o data-reveal e o hover de cada card volta a valer. */
+@media (prefers-reduced-motion: no-preference) {
+    .revela [data-reveal] {
+        opacity: 0;
+        transform: translate3d(-2rem, 0, 0);
+        transition: opacity 0.7s ease-out, transform 0.9s var(--curva);
+        transition-delay: var(--reveal-delay, 0ms);
+    }
+
+    .revela [data-reveal].is-visible {
+        opacity: 1;
+        transform: none;
+    }
+
+    /* Os divisores dourados não deslizam: se desenham, como um traço de caneta */
+    .revela .gold-divider[data-reveal] {
+        opacity: 1;
+        transform: scaleX(0);
+        transform-origin: left center;
+        transition: transform 1.1s var(--curva);
+        transition-delay: var(--reveal-delay, 0ms);
+    }
+
+    .revela .gold-divider[data-reveal].is-visible {
+        transform: scaleX(1);
+    }
+
+    /* Parallax: a foto anda mais devagar que a moldura (valor calculado em script.js) */
+    .js [data-parallax] {
+        transform: translate3d(0, var(--parallax-y, 0px), 0) scale(1.1);
+        will-change: transform;
+    }
+}
+
+/* ===== PUBLICAÇÕES (cards gerados por publicacoes.js) ===== */
+.pub-grade {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: minmax(0, 1fr);
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+@media (min-width: 640px) {
+    .pub-grade {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (min-width: 1024px) {
+    .pub-grade {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+.pub-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow: hidden;
+    border: 1px solid rgba(113, 63, 18, 0.4);
+    border-radius: 1rem;
+    background-color: #09090b;
+    color: inherit;
+    text-decoration: none;
+}
+
+.pub-card:hover,
+.pub-card:focus-visible {
+    border-color: rgba(202, 138, 4, 0.5);
+}
+
+.pub-thumb {
+    position: relative;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    background-color: #18181b;
+}
+
+.pub-thumb img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Imagem que não carregou (link expirado do Instagram, por exemplo) */
+.pub-thumb.sem-imagem {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(234, 179, 8, 0.5);
+    font-size: 2.5rem;
+}
+
+.pub-tipo {
+    position: absolute;
+    top: 0.75rem;
+    right: 0.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 9999px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: var(--ouro-200);
+    font-size: 0.8rem;
+}
+
+.pub-corpo {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1.25rem 1.25rem 1.5rem;
+}
+
+.pub-legenda {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+    overflow: hidden;
+    color: #d4d4d8;
+    line-height: 1.6;
+}
+
+.pub-data {
+    margin-top: auto;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--ouro-500);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .pub-card {
+        transition: border-color 0.2s;
+    }
+
+    .pub-thumb img {
+        transition: transform 0.6s var(--curva);
+    }
+
+    .pub-card:hover .pub-thumb img,
+    .pub-card:focus-visible .pub-thumb img {
+        transform: scale(1.05);
+    }
+}
+
+/* Skeleton enquanto o feed carrega: o brilho corre da esquerda para a direita */
+.pub-esqueleto .pub-card {
+    pointer-events: none;
+}
+
+.pub-esqueleto .pub-thumb,
+.pub-linha {
+    background-color: #18181b;
+    background-image: linear-gradient(90deg, #18181b 0%, #18181b 35%, #27272a 50%, #18181b 65%, #18181b 100%);
+    background-size: 300% 100%;
+    background-position: 100% 0;
+}
+
+.pub-linha {
+    display: block;
+    height: 0.875rem;
+    border-radius: 0.25rem;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .pub-esqueleto .pub-thumb,
+    .pub-linha {
+        animation: pub-brilho 1.6s linear infinite;
+    }
+}
+
+@keyframes pub-brilho {
+    from {
+        background-position: 100% 0;
+    }
+
+    to {
+        background-position: 0% 0;
     }
 }
 
