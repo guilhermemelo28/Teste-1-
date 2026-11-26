@@ -56,7 +56,20 @@
 
             <nav class="hidden items-center gap-8 md:flex" aria-label="Principal">
                 <a href="index.html#sobre" class="link-sublinhado text-sm font-medium text-zinc-300 hover:text-gold-400">Sobre Nós</a>
-                <a href="index.html#features" class="link-sublinhado text-sm font-medium text-zinc-300 hover:text-gold-400">Serviços</a>
+                <div class="menu-servicos">
+                    <a href="index.html#features" class="link-sublinhado text-sm font-medium text-zinc-300 hover:text-gold-400">Serviços<i class="fa-solid fa-chevron-down ml-1.5 text-[0.6rem] menu-seta" aria-hidden="true"></i></a>
+                    <div class="menu-servicos-lista">
+                        <div class="flex w-72 flex-col rounded-2xl border border-gold-900/40 bg-black p-2 shadow-2xl shadow-black/60">
+                            <a href="direito-civil.html" class="flex items-center gap-3 rounded-xl px-3 py-2.5 text-sm font-medium text-zinc-300 hover:bg-gold-950/30 hover:text-gold-400"><i class="fa-solid fa-scale-balanced w-4 text-center text-gold-500" aria-hidden="true"></i>Direito Civil</a>
+                            <a href="direito-trabalhista.html" class="flex items-center gap-3 rounded-xl px-3 py-2.5 text-sm font-medium text-zinc-300 hover:bg-gold-950/30 hover:text-gold-400"><i class="fa-solid fa-helmet-safety w-4 text-center text-gold-500" aria-hidden="true"></i>Direito Trabalhista</a>
+                            <a href="direito-criminal.html" class="flex items-center gap-3 rounded-xl px-3 py-2.5 text-sm font-medium text-zinc-300 hover:bg-gold-950/30 hover:text-gold-400"><i class="fa-solid fa-shield-halved w-4 text-center text-gold-500" aria-hidden="true"></i>Direito Criminal</a>
+                            <a href="crimes-ciberneticos.html" class="flex items-center gap-3 rounded-xl px-3 py-2.5 text-sm font-medium text-zinc-300 hover:bg-gold-950/30 hover:text-gold-400"><i class="fa-solid fa-laptop-code w-4 text-center text-gold-500" aria-hidden="true"></i>Crimes Cibernéticos e Perícia Digital</a>
+                            <a href="inventarios.html" class="flex items-center gap-3 rounded-xl px-3 py-2.5 text-sm font-medium text-zinc-300 hover:bg-gold-950/30 hover:text-gold-400"><i class="fa-solid fa-scroll w-4 text-center text-gold-500" aria-hidden="true"></i>Inventários</a>
+                            <a href="direito-empresarial.html" class="flex items-center gap-3 rounded-xl px-3 py-2.5 text-sm font-medium text-zinc-300 hover:bg-gold-950/30 hover:text-gold-400"><i class="fa-solid fa-briefcase w-4 text-center text-gold-500" aria-hidden="true"></i>Direito Empresarial</a>
+                            <a href="direito-tributario.html" class="flex items-center gap-3 rounded-xl px-3 py-2.5 text-sm font-medium text-zinc-300 hover:bg-gold-950/30 hover:text-gold-400"><i class="fa-solid fa-file-invoice-dollar w-4 text-center text-gold-500" aria-hidden="true"></i>Direito Tributário</a>
+                        </div>
+                    </div>
+                </div>
                 <a href="publicacoes.html" aria-current="page" class="link-sublinhado text-sm font-medium text-gold-400 hover:text-gold-200">Publicações</a>
                 <a href="index.html#localizacao" class="link-sublinhado text-sm font-medium text-zinc-300 hover:text-gold-400">Localização</a>
                 <a href="#footer" class="link-sublinhado text-sm font-medium text-zinc-300 hover:text-gold-400">Contato</a>
@@ -68,7 +81,22 @@
                 </summary>
                 <nav class="absolute right-0 top-12 z-50 flex min-w-[220px] flex-col overflow-hidden rounded-2xl border border-gold-900/40 bg-black shadow-2xl shadow-black/50" aria-label="Principal Mobile">
                     <a href="index.html#sobre" class="px-5 py-3 text-sm font-medium text-zinc-300 motion-safe:transition hover:bg-gold-950/30 hover:text-gold-400">Sobre Nós</a>
-                    <a href="index.html#features" class="px-5 py-3 text-sm font-medium text-zinc-300 motion-safe:transition hover:bg-gold-950/30 hover:text-gold-400">Serviços</a>
+                    <details class="submenu-mobile">
+                        <summary class="flex cursor-pointer list-none items-center justify-between px-5 py-3 text-sm font-medium text-zinc-300 motion-safe:transition hover:bg-gold-950/30 hover:text-gold-400 [&::-webkit-details-marker]:hidden">
+                            Serviços
+                            <i class="fa-solid fa-chevron-down text-xs text-gold-500 menu-seta" aria-hidden="true"></i>
+                        </summary>
+                        <div class="flex flex-col pb-2">
+                            <a href="index.html#features" class="py-2 pl-9 pr-5 text-sm text-zinc-400 motion-safe:transition hover:bg-gold-950/30 hover:text-gold-400">Ver todos os serviços</a>
+                            <a href="direito-civil.html" class="py-2 pl-9 pr-5 text-sm text-zinc-400 motion-safe:transition hover:bg-gold-950/30 hover:text-gold-400">Direito Civil</a>
+                            <a href="direito-trabalhista.html" class="py-2 pl-9 pr-5 text-sm text-zinc-400 motion-safe:transition hover:bg-gold-950/30 hover:text-gold-400">Direito Trabalhista</a>
+                            <a href="direito-criminal.html" class="py-2 pl-9 pr-5 text-sm text-zinc-400 motion-safe:transition hover:bg-gold-950/30 hover:text-gold-400">Direito Criminal</a>
+                            <a href="crimes-ciberneticos.html" class="py-2 pl-9 pr-5 text-sm text-zinc-400 motion-safe:transition hover:bg-gold-950/30 hover:text-gold-400">Crimes Cibernéticos e Perícia Digital</a>
+                            <a href="inventarios.html" class="py-2 pl-9 pr-5 text-sm text-zinc-400 motion-safe:transition hover:bg-gold-950/30 hover:text-gold-400">Inventários</a>
+                            <a href="direito-empresarial.html" class="py-2 pl-9 pr-5 text-sm text-zinc-400 motion-safe:transition hover:bg-gold-950/30 hover:text-gold-400">Direito Empresarial</a>
+                            <a href="direito-tributario.html" class="py-2 pl-9 pr-5 text-sm text-zinc-400 motion-safe:transition hover:bg-gold-950/30 hover:text-gold-400">Direito Tributário</a>
+                        </div>
+                    </details>
                     <a href="publicacoes.html" aria-current="page" class="bg-gold-950/30 px-5 py-3 text-sm font-medium text-gold-400 motion-safe:transition hover:text-gold-200">Publicações</a>
                     <a href="index.html#localizacao" class="px-5 py-3 text-sm font-medium text-zinc-300 motion-safe:transition hover:bg-gold-950/30 hover:text-gold-400">Localização</a>
                     <a href="#footer" class="px-5 py-3 text-sm font-medium text-zinc-300 motion-safe:transition hover:bg-gold-950/30 hover:text-gold-400">Contato</a>

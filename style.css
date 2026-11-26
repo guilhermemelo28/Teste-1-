@@ -123,6 +123,58 @@
     }
 }
 
+/* ===== SUBMENU "SERVIÇOS" =====
+   Abre ao passar o mouse ou ao focar pelo teclado (focus-within).
+   O padding-top da lista cria uma "ponte" para o mouse não perder o hover no caminho. */
+.menu-servicos {
+    position: relative;
+}
+
+.menu-servicos-lista {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    padding-top: 1rem;
+    opacity: 0;
+    visibility: hidden;
+    transform: translate(-50%, -6px);
+    z-index: 60;
+}
+
+.menu-servicos:hover .menu-servicos-lista,
+.menu-servicos:focus-within .menu-servicos-lista {
+    opacity: 1;
+    visibility: visible;
+    transform: translate(-50%, 0);
+}
+
+.menu-servicos:hover .menu-seta,
+.menu-servicos:focus-within .menu-seta {
+    transform: rotate(180deg);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .menu-servicos-lista {
+        transition: opacity 0.2s, transform 0.25s var(--curva), visibility 0.2s;
+    }
+
+    .menu-seta {
+        display: inline-block;
+        transition: transform 0.25s var(--curva);
+    }
+}
+
+/* Celular: seta de "Serviços" gira quando a lista de áreas está aberta */
+.submenu-mobile[open] .menu-seta {
+    transform: rotate(180deg);
+}
+
+/* Menu do celular ficou mais longo com as áreas: rola se não couber na tela */
+#menu-mobile nav {
+    max-height: calc(100vh - 7rem);
+    overflow-y: auto;
+}
+
 /* Barra de leitura: a linha dourada na base do cabeçalho enche conforme a rolagem */
 .leitura {
     position: absolute;

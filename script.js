@@ -174,6 +174,14 @@ document.addEventListener("DOMContentLoaded", function () {
             details.removeAttribute("open");
         });
     });
+
+    // Ao fechar o menu, a lista de áreas de "Serviços" também fecha
+    details.addEventListener("toggle", function () {
+        if (details.open) return;
+        details.querySelectorAll(".submenu-mobile[open]").forEach(function (sub) {
+            sub.removeAttribute("open");
+        });
+    });
 });
 
 // ===== ANO AUTOMÁTICO ===== //

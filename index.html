@@ -57,7 +57,20 @@
 
             <nav class="hidden items-center gap-8 md:flex" aria-label="Principal">
                 <a href="#sobre" class="link-sublinhado text-sm font-medium text-zinc-300 hover:text-gold-400">Sobre Nós</a>
-                <a href="#features" class="link-sublinhado text-sm font-medium text-zinc-300 hover:text-gold-400">Serviços</a>
+                <div class="menu-servicos">
+                    <a href="#features" class="link-sublinhado text-sm font-medium text-zinc-300 hover:text-gold-400">Serviços<i class="fa-solid fa-chevron-down ml-1.5 text-[0.6rem] menu-seta" aria-hidden="true"></i></a>
+                    <div class="menu-servicos-lista">
+                        <div class="flex w-72 flex-col rounded-2xl border border-gold-900/40 bg-black p-2 shadow-2xl shadow-black/60">
+                            <a href="direito-civil.html" class="flex items-center gap-3 rounded-xl px-3 py-2.5 text-sm font-medium text-zinc-300 hover:bg-gold-950/30 hover:text-gold-400"><i class="fa-solid fa-scale-balanced w-4 text-center text-gold-500" aria-hidden="true"></i>Direito Civil</a>
+                            <a href="direito-trabalhista.html" class="flex items-center gap-3 rounded-xl px-3 py-2.5 text-sm font-medium text-zinc-300 hover:bg-gold-950/30 hover:text-gold-400"><i class="fa-solid fa-helmet-safety w-4 text-center text-gold-500" aria-hidden="true"></i>Direito Trabalhista</a>
+                            <a href="direito-criminal.html" class="flex items-center gap-3 rounded-xl px-3 py-2.5 text-sm font-medium text-zinc-300 hover:bg-gold-950/30 hover:text-gold-400"><i class="fa-solid fa-shield-halved w-4 text-center text-gold-500" aria-hidden="true"></i>Direito Criminal</a>
+                            <a href="crimes-ciberneticos.html" class="flex items-center gap-3 rounded-xl px-3 py-2.5 text-sm font-medium text-zinc-300 hover:bg-gold-950/30 hover:text-gold-400"><i class="fa-solid fa-laptop-code w-4 text-center text-gold-500" aria-hidden="true"></i>Crimes Cibernéticos e Perícia Digital</a>
+                            <a href="inventarios.html" class="flex items-center gap-3 rounded-xl px-3 py-2.5 text-sm font-medium text-zinc-300 hover:bg-gold-950/30 hover:text-gold-400"><i class="fa-solid fa-scroll w-4 text-center text-gold-500" aria-hidden="true"></i>Inventários</a>
+                            <a href="direito-empresarial.html" class="flex items-center gap-3 rounded-xl px-3 py-2.5 text-sm font-medium text-zinc-300 hover:bg-gold-950/30 hover:text-gold-400"><i class="fa-solid fa-briefcase w-4 text-center text-gold-500" aria-hidden="true"></i>Direito Empresarial</a>
+                            <a href="direito-tributario.html" class="flex items-center gap-3 rounded-xl px-3 py-2.5 text-sm font-medium text-zinc-300 hover:bg-gold-950/30 hover:text-gold-400"><i class="fa-solid fa-file-invoice-dollar w-4 text-center text-gold-500" aria-hidden="true"></i>Direito Tributário</a>
+                        </div>
+                    </div>
+                </div>
                 <a href="#publicacoes" class="link-sublinhado text-sm font-medium text-zinc-300 hover:text-gold-400">Publicações</a>
                 <a href="#localizacao" class="link-sublinhado text-sm font-medium text-zinc-300 hover:text-gold-400">Localização</a>
                 <a href="#footer" class="link-sublinhado text-sm font-medium text-zinc-300 hover:text-gold-400">Contato</a>
@@ -69,7 +82,22 @@
                 </summary>
                 <nav class="absolute right-0 top-12 z-50 flex min-w-[220px] flex-col overflow-hidden rounded-2xl border border-gold-900/40 bg-black shadow-2xl shadow-black/50" aria-label="Principal Mobile">
                     <a href="#sobre" class="px-5 py-3 text-sm font-medium text-zinc-300 motion-safe:transition hover:bg-gold-950/30 hover:text-gold-400">Sobre Nós</a>
-                    <a href="#features" class="px-5 py-3 text-sm font-medium text-zinc-300 motion-safe:transition hover:bg-gold-950/30 hover:text-gold-400">Serviços</a>
+                    <details class="submenu-mobile">
+                        <summary class="flex cursor-pointer list-none items-center justify-between px-5 py-3 text-sm font-medium text-zinc-300 motion-safe:transition hover:bg-gold-950/30 hover:text-gold-400 [&::-webkit-details-marker]:hidden">
+                            Serviços
+                            <i class="fa-solid fa-chevron-down text-xs text-gold-500 menu-seta" aria-hidden="true"></i>
+                        </summary>
+                        <div class="flex flex-col pb-2">
+                            <a href="#features" class="py-2 pl-9 pr-5 text-sm text-zinc-400 motion-safe:transition hover:bg-gold-950/30 hover:text-gold-400">Ver todos os serviços</a>
+                            <a href="direito-civil.html" class="py-2 pl-9 pr-5 text-sm text-zinc-400 motion-safe:transition hover:bg-gold-950/30 hover:text-gold-400">Direito Civil</a>
+                            <a href="direito-trabalhista.html" class="py-2 pl-9 pr-5 text-sm text-zinc-400 motion-safe:transition hover:bg-gold-950/30 hover:text-gold-400">Direito Trabalhista</a>
+                            <a href="direito-criminal.html" class="py-2 pl-9 pr-5 text-sm text-zinc-400 motion-safe:transition hover:bg-gold-950/30 hover:text-gold-400">Direito Criminal</a>
+                            <a href="crimes-ciberneticos.html" class="py-2 pl-9 pr-5 text-sm text-zinc-400 motion-safe:transition hover:bg-gold-950/30 hover:text-gold-400">Crimes Cibernéticos e Perícia Digital</a>
+                            <a href="inventarios.html" class="py-2 pl-9 pr-5 text-sm text-zinc-400 motion-safe:transition hover:bg-gold-950/30 hover:text-gold-400">Inventários</a>
+                            <a href="direito-empresarial.html" class="py-2 pl-9 pr-5 text-sm text-zinc-400 motion-safe:transition hover:bg-gold-950/30 hover:text-gold-400">Direito Empresarial</a>
+                            <a href="direito-tributario.html" class="py-2 pl-9 pr-5 text-sm text-zinc-400 motion-safe:transition hover:bg-gold-950/30 hover:text-gold-400">Direito Tributário</a>
+                        </div>
+                    </details>
                     <a href="#publicacoes" class="px-5 py-3 text-sm font-medium text-zinc-300 motion-safe:transition hover:bg-gold-950/30 hover:text-gold-400">Publicações</a>
                     <a href="#localizacao" class="px-5 py-3 text-sm font-medium text-zinc-300 motion-safe:transition hover:bg-gold-950/30 hover:text-gold-400">Localização</a>
                     <a href="#footer" class="px-5 py-3 text-sm font-medium text-zinc-300 motion-safe:transition hover:bg-gold-950/30 hover:text-gold-400">Contato</a>
@@ -134,66 +162,73 @@
                     Nossos <span class="gold-text">serviços</span> ofertados
                 </h2>
                 <div data-reveal class="gold-divider mx-auto mt-4 max-w-xs"></div>
-                <p data-reveal class="mt-4 text-lg text-zinc-400">Áreas de atuação do escritório WOM - Wesley Melo Advogados Associados. Toque na área do seu caso para conversar pelo WhatsApp.</p>
+                <p data-reveal class="mt-4 text-lg text-zinc-400">Áreas de atuação do escritório WOM - Wesley Melo Advogados Associados. Toque em uma área para saber mais sobre ela.</p>
             </div>
 
             <!-- 7 áreas + 1 card de dúvida = 8 cards: fecha 2 colunas (tablet) e 4 colunas (desktop) sem card órfão -->
             <div class="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
 
-                <a data-reveal href="https://wa.me/5517997413122?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20uma%20orienta%C3%A7%C3%A3o%20sobre%20Direito%20Civil." target="_blank" rel="noopener noreferrer" class="area-card group flex flex-col rounded-2xl border border-gold-900/40 bg-zinc-950 p-6 hover:border-gold-600/50 hover:shadow-xl hover:shadow-gold-500/5">
+                <a data-reveal href="direito-civil.html" target="_blank" rel="noopener" class="area-card group flex flex-col rounded-2xl border border-gold-900/40 bg-zinc-950 p-6 hover:border-gold-600/50 hover:shadow-xl hover:shadow-gold-500/5">
                     <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-gold-500/10 text-gold-500">
                         <i class="fa-solid fa-scale-balanced text-xl" aria-hidden="true"></i>
                     </div>
                     <h3 class="mt-4 text-lg font-semibold text-white">Direito Civil</h3>
                     <p class="mt-2 flex-1 text-zinc-400">Quando você sofreu um prejuízo e quer ser indenizado, tem um contrato que não foi cumprido, um problema com imóvel ou uma questão de família ou de herança.</p>
+                    <span class="mt-4 text-sm font-semibold text-gold-400 group-hover:text-gold-200">Saiba mais <i class="fa-solid fa-arrow-right ml-1 text-xs motion-safe:transition group-hover:translate-x-1" aria-hidden="true"></i></span>
                 </a>
 
-                <a data-reveal href="https://wa.me/5517997413122?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20uma%20orienta%C3%A7%C3%A3o%20sobre%20Direito%20Trabalhista." target="_blank" rel="noopener noreferrer" class="area-card group flex flex-col rounded-2xl border border-gold-900/40 bg-zinc-950 p-6 hover:border-gold-600/50 hover:shadow-xl hover:shadow-gold-500/5">
+                <a data-reveal href="direito-trabalhista.html" target="_blank" rel="noopener" class="area-card group flex flex-col rounded-2xl border border-gold-900/40 bg-zinc-950 p-6 hover:border-gold-600/50 hover:shadow-xl hover:shadow-gold-500/5">
                     <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-gold-500/10 text-gold-500">
                         <i class="fa-solid fa-helmet-safety text-xl" aria-hidden="true"></i>
                     </div>
                     <h3 class="mt-4 text-lg font-semibold text-white">Direito Trabalhista</h3>
                     <p class="mt-2 flex-1 text-zinc-400">Para o trabalhador com um problema no emprego e para a empresa que quer evitar processos ou precisa se defender em uma reclamação trabalhista.</p>
+                    <span class="mt-4 text-sm font-semibold text-gold-400 group-hover:text-gold-200">Saiba mais <i class="fa-solid fa-arrow-right ml-1 text-xs motion-safe:transition group-hover:translate-x-1" aria-hidden="true"></i></span>
                 </a>
 
-                <a data-reveal href="https://wa.me/5517997413122?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20uma%20orienta%C3%A7%C3%A3o%20sobre%20Direito%20Criminal." target="_blank" rel="noopener noreferrer" class="area-card group flex flex-col rounded-2xl border border-gold-900/40 bg-zinc-950 p-6 hover:border-gold-600/50 hover:shadow-xl hover:shadow-gold-500/5">
+                <a data-reveal href="direito-criminal.html" target="_blank" rel="noopener" class="area-card group flex flex-col rounded-2xl border border-gold-900/40 bg-zinc-950 p-6 hover:border-gold-600/50 hover:shadow-xl hover:shadow-gold-500/5">
                     <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-gold-500/10 text-gold-500">
                         <i class="fa-solid fa-shield-halved text-xl" aria-hidden="true"></i>
                     </div>
                     <h3 class="mt-4 text-lg font-semibold text-white">Direito Criminal</h3>
                     <p class="mt-2 flex-1 text-zinc-400">Quando você ou alguém próximo está sendo investigado ou processado. Defesa em todas as fases do processo, em casos como crimes contra o patrimônio, crimes econômicos, tráfico e homicídio.</p>
+                    <span class="mt-4 text-sm font-semibold text-gold-400 group-hover:text-gold-200">Saiba mais <i class="fa-solid fa-arrow-right ml-1 text-xs motion-safe:transition group-hover:translate-x-1" aria-hidden="true"></i></span>
                 </a>
 
-                <a data-reveal href="https://wa.me/5517997413122?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20uma%20orienta%C3%A7%C3%A3o%20sobre%20crimes%20cibern%C3%A9ticos." target="_blank" rel="noopener noreferrer" class="area-card group flex flex-col rounded-2xl border border-gold-900/40 bg-zinc-950 p-6 hover:border-gold-600/50 hover:shadow-xl hover:shadow-gold-500/5">
+                <a data-reveal href="crimes-ciberneticos.html" target="_blank" rel="noopener" class="area-card group flex flex-col rounded-2xl border border-gold-900/40 bg-zinc-950 p-6 hover:border-gold-600/50 hover:shadow-xl hover:shadow-gold-500/5">
                     <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-gold-500/10 text-gold-500">
                         <i class="fa-solid fa-laptop-code text-xl" aria-hidden="true"></i>
                     </div>
                     <h3 class="mt-4 text-lg font-semibold text-white">Defesa de Crimes Cibernéticos e Perícia Digital</h3>
                     <p class="mt-2 flex-1 text-zinc-400">Quando o caso envolve internet: fraude eletrônica, invasão de sistemas, estelionato digital ou violação de dados. Inclui a análise pericial das provas digitais.</p>
+                    <span class="mt-4 text-sm font-semibold text-gold-400 group-hover:text-gold-200">Saiba mais <i class="fa-solid fa-arrow-right ml-1 text-xs motion-safe:transition group-hover:translate-x-1" aria-hidden="true"></i></span>
                 </a>
 
-                <a data-reveal href="https://wa.me/5517997413122?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20uma%20orienta%C3%A7%C3%A3o%20sobre%20invent%C3%A1rio." target="_blank" rel="noopener noreferrer" class="area-card group flex flex-col rounded-2xl border border-gold-900/40 bg-zinc-950 p-6 hover:border-gold-600/50 hover:shadow-xl hover:shadow-gold-500/5">
+                <a data-reveal href="inventarios.html" target="_blank" rel="noopener" class="area-card group flex flex-col rounded-2xl border border-gold-900/40 bg-zinc-950 p-6 hover:border-gold-600/50 hover:shadow-xl hover:shadow-gold-500/5">
                     <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-gold-500/10 text-gold-500">
                         <i class="fa-solid fa-scroll text-xl" aria-hidden="true"></i>
                     </div>
                     <h3 class="mt-4 text-lg font-semibold text-white">Inventários</h3>
                     <p class="mt-2 flex-1 text-zinc-400">Quando alguém da família faleceu e é preciso fazer o inventário e a partilha dos bens, em cartório ou na Justiça. Também para quem quer planejar em vida como o patrimônio vai passar aos herdeiros.</p>
+                    <span class="mt-4 text-sm font-semibold text-gold-400 group-hover:text-gold-200">Saiba mais <i class="fa-solid fa-arrow-right ml-1 text-xs motion-safe:transition group-hover:translate-x-1" aria-hidden="true"></i></span>
                 </a>
 
-                <a data-reveal href="https://wa.me/5517997413122?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20uma%20orienta%C3%A7%C3%A3o%20sobre%20Direito%20Empresarial." target="_blank" rel="noopener noreferrer" class="area-card group flex flex-col rounded-2xl border border-gold-900/40 bg-zinc-950 p-6 hover:border-gold-600/50 hover:shadow-xl hover:shadow-gold-500/5">
+                <a data-reveal href="direito-empresarial.html" target="_blank" rel="noopener" class="area-card group flex flex-col rounded-2xl border border-gold-900/40 bg-zinc-950 p-6 hover:border-gold-600/50 hover:shadow-xl hover:shadow-gold-500/5">
                     <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-gold-500/10 text-gold-500">
                         <i class="fa-solid fa-briefcase text-xl" aria-hidden="true"></i>
                     </div>
                     <h3 class="mt-4 text-lg font-semibold text-white">Direito Empresarial</h3>
                     <p class="mt-2 flex-1 text-zinc-400">Para quem tem empresa e precisa de contratos comerciais, organizar a sociedade entre os sócios, comprar, vender ou unir empresas, ou deixar o negócio em dia com as regras (compliance).</p>
+                    <span class="mt-4 text-sm font-semibold text-gold-400 group-hover:text-gold-200">Saiba mais <i class="fa-solid fa-arrow-right ml-1 text-xs motion-safe:transition group-hover:translate-x-1" aria-hidden="true"></i></span>
                 </a>
 
-                <a data-reveal href="https://wa.me/5517997413122?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20uma%20orienta%C3%A7%C3%A3o%20sobre%20Direito%20Tribut%C3%A1rio." target="_blank" rel="noopener noreferrer" class="area-card group flex flex-col rounded-2xl border border-gold-900/40 bg-zinc-950 p-6 hover:border-gold-600/50 hover:shadow-xl hover:shadow-gold-500/5">
+                <a data-reveal href="direito-tributario.html" target="_blank" rel="noopener" class="area-card group flex flex-col rounded-2xl border border-gold-900/40 bg-zinc-950 p-6 hover:border-gold-600/50 hover:shadow-xl hover:shadow-gold-500/5">
                     <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-gold-500/10 text-gold-500">
                         <i class="fa-solid fa-file-invoice-dollar text-xl" aria-hidden="true"></i>
                     </div>
                     <h3 class="mt-4 text-lg font-semibold text-white">Direito Tributário</h3>
                     <p class="mt-2 flex-1 text-zinc-400">Quando você ou sua empresa recebeu uma cobrança ou autuação do fisco, quer pagar menos impostos dentro da lei ou acredita ter pago imposto a mais e quer recuperar o valor.</p>
+                    <span class="mt-4 text-sm font-semibold text-gold-400 group-hover:text-gold-200">Saiba mais <i class="fa-solid fa-arrow-right ml-1 text-xs motion-safe:transition group-hover:translate-x-1" aria-hidden="true"></i></span>
                 </a>
 
                 <a data-reveal href="https://wa.me/5517997413122?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20uma%20orienta%C3%A7%C3%A3o." target="_blank" rel="noopener noreferrer" class="area-card group flex flex-col justify-center rounded-2xl border border-gold-600/60 bg-gold-500/10 p-6 hover:border-gold-400 hover:bg-gold-500/15 hover:shadow-xl hover:shadow-gold-500/10">
